@@ -40,8 +40,7 @@ public:
     void lock() { mutex_.lock(); }
     void unlock() { mutex_.unlock(); }
 
-    static int lua_pcall(lua_State* L, int nargs, int nresults, int errfunc);
-    static int lua_pcall_ex(lua_State* L, int nargs, int nresults, int errfunc);
+    static int debug_call(lua_State* L, int nargs, int nresults, int errfunc);
 
 protected:
     lua_State* L_ = nullptr;

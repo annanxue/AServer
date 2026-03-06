@@ -87,7 +87,7 @@ bool AppBase::start() {
 
     for (auto cls : classes_) {
         if (!cls->app_class_init()) {
-            ERROR("Failed to initialize class");
+            ERR("Failed to initialize class");
             return false;
         }
     }

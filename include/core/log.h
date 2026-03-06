@@ -63,9 +63,6 @@ private:
 #define INFO(...) LOG_INFO(__VA_ARGS__)
 #define WARN(...) LOG_WARN(__VA_ARGS__)
 #define ERR(...) LOG_ERROR(__VA_ARGS__)
-#ifndef _WIN32
-#define ERROR(...) LOG_ERROR(__VA_ARGS__)
-#endif
 
 }
 

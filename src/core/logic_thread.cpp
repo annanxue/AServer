@@ -45,9 +45,9 @@ void LogicThread::run() {
             }
         } catch (const std::exception& e) {
             (void)e;
-            ERROR("LogicThread exception: %s", e.what());
+            ERR("LogicThread exception: %s", e.what());
         } catch (...) {
-            ERROR("LogicThread unknown exception");
+            ERR("LogicThread unknown exception");
         }
         unlock();
 

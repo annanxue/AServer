@@ -61,7 +61,7 @@ void BFClient::msg_handle(const char* msg, int size, int packet_type, DPID dpid)
                         lua_pushinteger(L, size);
                         lua_pushinteger(L, packet_type);
                         lua_pushinteger(L, dpid);
-                        LuaServer::lua_pcall_ex(L, 4, 0, 0);
+                        LuaServer::debug_call(L, 4, 0, 0);
                     }
                 }
                 lua_settop(L, 0);

@@ -152,11 +152,7 @@ int LuaServer::traceback(lua_State* L) {
     return 1;
 }
 
-int LuaServer::lua_pcall(lua_State* L, int nargs, int nresults, int errfunc) {
-    return lua_pcall_ex(L, nargs, nresults, errfunc);
-}
-
-int LuaServer::lua_pcall_ex(lua_State* L, int nargs, int nresults, int errfunc) {
+int LuaServer::debug_call(lua_State* L, int nargs, int nresults, int errfunc) {
     int base = lua_gettop(L) - nargs - 1;
     lua_pushcfunction(L, traceback);
     lua_insert(L, base);

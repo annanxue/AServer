@@ -1,6 +1,11 @@
 #include "game_lua_module.h"
 #include "game_svr_module.h"
 #include "log.h"
+extern "C" {
+#include <lua.h>
+#include <lauxlib.h>
+#include <lualib.h>
+}
 
 namespace AServer {
 

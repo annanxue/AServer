@@ -67,7 +67,7 @@ void DBClient::lua_msg_handle(lua_State* L, const char* msg, int size, int packe
     lua_pushinteger(L, size);
     lua_pushinteger(L, packet_type);
 
-    if (LuaServer::lua_pcall_ex(L, 3, 0, 0) != 0) {
+    if (LuaServer::debug_call(L, 3, 0, 0) != 0) {
         const char* err = lua_tostring(L, -1);
         ERR("DBClient Lua msg handle error: %s", err ? err : "unknown");
         lua_pop(L, 1);

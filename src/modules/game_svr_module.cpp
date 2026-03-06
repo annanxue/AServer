@@ -88,7 +88,7 @@ void GameSvr::lua_msg_handle(lua_State* L, const char* msg, int size, int packet
     lua_pushinteger(L, packet_type);
     lua_pushinteger(L, dpid);
 
-    if (LuaServer::lua_pcall_ex(L, 4, 0, 0) != 0) {
+    if (LuaServer::debug_call(L, 4, 0, 0) != 0) {
         const char* err = lua_tostring(L, -1);
         ERR("Lua msg handle error: %s", err ? err : "unknown");
         lua_pop(L, 1);
