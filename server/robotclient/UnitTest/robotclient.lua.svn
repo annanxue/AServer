@@ -1,0 +1,45 @@
+AppConfig = 
+{
+    Daemon = 0,         --是否(1/0)后台模式启动
+    TimerSize = 1024,   --Timer预生成的内存块大小
+
+    HttpTaskNum = 8,
+    Resource = "./resource",
+
+    --配置日志路径和等级
+    Log =
+    {
+        LogPathPrefix = "./log/game",
+        ErrLevel = 4,
+        LogLevel = 2,
+        TraceLevel = 2,
+        ProfLevel = 2,
+    },
+ 
+    --配置lua脚本目录和入口
+    Lua = 
+    {
+        Path = "./script/",         --Lua文件所在位置
+        MainFile = "main.lua",      
+    },
+
+    LogicFrameRate = 30,            -- 逻辑线程帧率 
+
+    --配置robotclient.lua，对应loginserver.lua的PlayerLoginSvr配置和gameserver.lua的GameSvr配置
+    RobotClient =
+    {
+        PlayerNum = 1,                  -- 玩家数
+        RobotType = 1,                  -- 1: 站立, 2: 行走, 3: 放技能, 4: 商店操作, 5: 聊天, 6: 充值, 7: 副本 , 8：组队
+        LoginSvrIP = "192.168.15.9",    -- LoginSvr的IP
+        LoginSvrPort = 14000,           -- LoginSvr的监听端口
+        GameSvrIP = "192.168.14.88",    -- GameSvr的IP
+        GameSvrPort = 14100,            -- GameSvr的监听端口
+        GameSvrID = 1,                  -- GameSvr的ID
+        Crypt = 1,                      -- 是否加密
+        PollWaitTime = 100,             -- epoll wait time
+        SleepTime = 2000,               -- 和服务器断开连接后的重连间隔
+        UserIdBeginNum = 0,
+        LoginType = "39",
+    },
+}
+

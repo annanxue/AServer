@@ -1,0 +1,361 @@
+﻿{"takeName": "Take1(1)","inits": [{"type": "position","go": "Monster","position": {"x": 448.480,"y": 62.520,"z": 354.800}
+,"objName": "2360","cinemaIdx": 283,}
+,{"type": "rotation","go": "Monster","rotation": {"y": 90.000,}
+,"objName": "2360","cinemaIdx": 283,}
+,{"type": "position","go": "Hero","position": {"x": 455.330,"y": 62.520,"z": 354.260}
+,"objName": "2041",}
+,{"type": "rotation","go": "Hero","rotation": {"y": 270.000,}
+,"objName": "2041",}
+,{"type": "position","go": "Camera","position": {"x": 450.531,"y": 65.675,"z": 355.061}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 20.299,"y": 250.461,"z": 0.000}
+,"objName": "SceneCamera",}
+,{"type": "position","go": "CreateMonster","position": {"x": 441.070,"y": 62.520,"z": 349.460}
+,"objName": "2372","typeId": 12805}
+,{"type": "rotation","go": "CreateMonster","rotation": {}
+,"objName": "2372","typeId": 12805}
+],"actions": [{"method": "moveto","go": "Monster","time": 3.367,"easeType": 21,"customEase": [],"floats": [0.033,3.400],"path": [{"x": 444.590,"y": 63.420,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 3.367,"time": 0.167,"easeType": 21,"customEase": [],"floats": [3.400,3.567],"path": [{"x": 445.600,"y": 63.400,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 3.533,"time": 1.767,"easeType": 21,"customEase": [],"floats": [3.567,5.333],"path": [{"x": 446.040,"y": 63.110,"z": 354.780}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 5.300,"time": 0.033,"easeType": 33,"customEase": [],"floats": [5.333,5.367],"path": [{"x": 447.060,"y": 62.520,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 5.333,"time": 0.700,"easeType": 21,"customEase": [],"floats": [5.367,6.067],"path": [{"x": 446.910,"y": 62.520,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 6.033,"time": 0.367,"easeType": 21,"customEase": [],"floats": [6.067,6.433],"path": [{"x": 445.070,"y": 62.080,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 6.400,"time": 0.167,"easeType": 21,"customEase": [],"floats": [6.433,6.600],"path": [{"x": 445.170,"y": 62.070,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 6.567,"time": 0.300,"easeType": 21,"customEase": [],"floats": [6.600,6.900],"path": [{"x": 444.480,"y": 62.050,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 6.867,"time": 0.267,"easeType": 21,"customEase": [],"floats": [6.900,7.167],"path": [{"x": 443.880,"y": 62.050,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 7.133,"time": 0.367,"easeType": 21,"customEase": [],"floats": [7.167,7.533],"path": [{"x": 443.100,"y": 62.050,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 7.500,"time": 0.167,"easeType": 21,"customEase": [],"floats": [7.533,7.700],"path": [{"x": 442.900,"y": 62.050,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 7.667,"time": 0.167,"easeType": 21,"customEase": [],"floats": [7.700,7.867],"path": [{"x": 443.310,"y": 62.050,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 7.833,"time": 0.500,"easeType": 21,"customEase": [],"floats": [7.867,8.367],"path": [{"x": 442.890,"y": 62.050,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 8.333,"time": 1.500,"easeType": 21,"customEase": [],"floats": [8.367,9.867],"path": [{"x": 443.940,"y": 62.080,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 9.833,"time": 0.267,"easeType": 21,"customEase": [],"floats": [9.867,10.133],"path": [{"x": 443.950,"y": 61.170,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 10.100,"time": 0.100,"easeType": 21,"customEase": [],"floats": [10.133,10.233],"path": [{"x": 441.140,"y": 61.650,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 10.200,"time": 0.133,"easeType": 21,"customEase": [],"floats": [10.233,10.367],"path": [{"x": 436.590,"y": 61.750,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 10.333,"time": 0.033,"easeType": 33,"customEase": [],"floats": [10.367,10.400],"path": [{"x": 444.840,"y": 62.020,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 10.367,"time": 0.233,"easeType": 21,"customEase": [],"floats": [10.400,10.633],"path": [{"x": 438.830,"y": 62.520,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 10.600,"time": 0.133,"easeType": 21,"customEase": [],"floats": [10.633,10.767],"path": [{"x": 438.070,"y": 62.520,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 10.733,"time": 1.400,"easeType": 21,"customEase": [],"floats": [10.767,12.167],"path": [{"x": 438.070,"y": 62.520,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 12.133,"time": 4.900,"easeType": 21,"customEase": [],"floats": [12.167,17.067],"path": [{"x": 440.490,"y": 62.520,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 17.033,"time": 3.267,"easeType": 21,"customEase": [],"floats": [17.067,20.333],"path": [{"x": 440.490,"y": 62.520,"z": 354.800}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 20.300,"time": 0.533,"easeType": 21,"customEase": [],"floats": [20.333,20.867],"path": [{"x": 440.570,"y": 62.520,"z": 353.040}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 20.833,"time": 0.667,"easeType": 21,"customEase": [],"floats": [20.867,21.533],"path": [{"x": 440.720,"y": 62.520,"z": 349.470}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 21.500,"time": 0.033,"easeType": 33,"customEase": [],"floats": [21.533,21.567],"path": [{"x": 428.600,"y": 76.680,"z": 335.660}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Monster","delay": 21.533,"time": 0.933,"easeType": 21,"customEase": [],"floats": [21.567,22.500],"path": [{"x": 428.600,"y": 76.680,"z": 335.660}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","time": 3.367,"easeType": 21,"customEase": [],"path": [{"y": 90.000,}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 3.367,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 0.745,"y": 89.949,"z": 0.009}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 3.533,"time": 1.767,"easeType": 21,"customEase": [],"path": [{"x": 0.111,"y": 89.992,"z": 0.001}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 5.300,"time": 0.367,"easeType": 21,"customEase": [],"path": [{"y": 90.000,}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 5.667,"time": 11.367,"easeType": 21,"customEase": [],"path": [{"y": 90.000,}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 17.033,"time": 3.267,"easeType": 21,"customEase": [],"path": [{"y": 90.000,}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 20.300,"time": 0.533,"easeType": 21,"customEase": [],"path": [{"y": 177.543,}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 20.833,"time": 0.667,"easeType": 21,"customEase": [],"path": [{"y": 177.543,}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "rotateto","go": "Monster","delay": 21.500,"time": 0.033,"easeType": 21,"customEase": [],"path": [{"y": 177.543,}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","strings": ["act_08"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 2.767,"strings": ["skill_236002"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 3.367,"strings": ["cinema_1013_03"],"floats": [2.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 6.033,"strings": ["hit"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 6.433,"strings": ["cinema_1013"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 6.667,"strings": ["hit"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 7.100,"strings": ["cinema_1013"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 7.500,"strings": ["hit"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 7.667,"strings": ["cinema_1013"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 7.833,"strings": ["hit"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 8.233,"strings": ["default"],"floats": [1.000,0.200],"bools": [true],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 9.867,"strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 10.033,"strings": ["cinema_1013_02"],"floats": [1.000,0.200],"bools": [true],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 13.633,"strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 15.033,"strings": ["skill_236009"],"floats": [1.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 17.033,"strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 20.367,"strings": ["walk_back"],"floats": [2.000,0.200],"bools": [true],"objName": "2360","cinemaIdx": 283,}
+,{"method": "playanimation","go": "Monster","delay": 21.500,"strings": ["default"],"floats": [2.000,0.200],"bools": [false],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Hero","delay": 1.000,"time": 4.400,"easeType": 21,"customEase": [],"floats": [1.033,5.433],"path": [{"x": 455.330,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 5.400,"time": 0.600,"easeType": 21,"customEase": [],"floats": [5.433,6.033],"path": [{"x": 449.540,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 6.000,"time": 0.300,"easeType": 21,"customEase": [],"floats": [6.033,6.333],"path": [{"x": 448.940,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 6.300,"time": 0.133,"easeType": 21,"customEase": [],"floats": [6.333,6.467],"path": [{"x": 448.210,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 6.433,"time": 0.200,"easeType": 21,"customEase": [],"floats": [6.467,6.667],"path": [{"x": 448.110,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 6.633,"time": 0.133,"easeType": 21,"customEase": [],"floats": [6.667,6.800],"path": [{"x": 447.950,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 6.767,"time": 0.267,"easeType": 33,"customEase": [],"floats": [6.800,7.067],"path": [{"x": 447.950,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 7.033,"time": 0.100,"easeType": 21,"customEase": [],"floats": [7.067,7.167],"path": [{"x": 447.440,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 7.133,"time": 0.100,"easeType": 21,"customEase": [],"floats": [7.167,7.267],"path": [{"x": 447.220,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 7.233,"time": 0.100,"easeType": 21,"customEase": [],"floats": [7.267,7.367],"path": [{"x": 446.950,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 7.333,"time": 0.400,"easeType": 21,"customEase": [],"floats": [7.367,7.767],"path": [{"x": 446.950,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "moveto","go": "Hero","delay": 7.733,"time": 0.167,"easeType": 21,"customEase": [],"floats": [7.767,7.933],"path": [{"x": 446.419,"y": 62.520,"z": 354.260}
+],"objName": "2041",}
+,{"method": "rotateto","go": "Hero","time": 5.400,"easeType": 21,"customEase": [],"path": [{"y": 270.000,}
+],"objName": "2041",}
+,{"method": "sendmessage","go": "Monster","delay": 3.433,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3214",}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "sendmessage","go": "Monster","delay": 6.033,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3214",}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "sendmessage","go": "Monster","delay": 12.967,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "101311",}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "sendmessage","go": "Monster","delay": 15.367,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "101312",}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "sendmessage","go": "Monster","delay": 20.633,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "sendmessage","go": "Monster","delay": 21.467,"strings": ["color_correction"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "sendmessage","go": "Monster","delay": 21.500,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2214",}
+],"objName": "2360","cinemaIdx": 283,}
+,{"method": "moveto","go": "Camera","time": 0.567,"easeType": 21,"customEase": [],"floats": [0.033,0.600],"path": [{"x": 452.210,"y": 65.050,"z": 355.110}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.567,"time": 0.433,"easeType": 21,"customEase": [],"floats": [0.600,1.033],"path": [{"x": 457.280,"y": 63.110,"z": 355.820}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.000,"time": 0.767,"easeType": 21,"customEase": [],"floats": [1.033,1.800],"path": [{"x": 457.990,"y": 62.860,"z": 355.940}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.767,"time": 0.067,"easeType": 33,"customEase": [],"floats": [1.800,1.867],"path": [{"x": 454.330,"y": 63.460,"z": 355.200}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.833,"time": 0.900,"easeType": 21,"customEase": [],"floats": [1.867,2.767],"path": [{"x": 454.035,"y": 63.454,"z": 355.589}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 2.733,"time": 0.067,"easeType": 33,"customEase": [],"floats": [2.767,2.833],"path": [{"x": 447.295,"y": 67.081,"z": 355.230}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 2.800,"time": 0.533,"easeType": 21,"customEase": [],"floats": [2.833,3.367],"path": [{"x": 447.453,"y": 66.898,"z": 355.376}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.333,"time": 0.067,"easeType": 33,"customEase": [],"floats": [3.367,3.433],"path": [{"x": 450.090,"y": 64.070,"z": 364.310}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.400,"time": 1.900,"easeType": 21,"customEase": [],"floats": [3.433,5.333],"path": [{"x": 450.094,"y": 64.070,"z": 364.324}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.300,"time": 0.067,"easeType": 33,"customEase": [],"floats": [5.333,5.400],"path": [{"x": 458.490,"y": 63.160,"z": 356.230}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.367,"time": 0.433,"easeType": 21,"customEase": [],"floats": [5.400,5.833],"path": [{"x": 458.170,"y": 63.040,"z": 356.130}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.800,"time": 0.467,"easeType": 21,"customEase": [],"floats": [5.833,6.300],"path": [{"x": 453.120,"y": 65.660,"z": 358.810}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 6.267,"time": 0.233,"easeType": 21,"customEase": [],"floats": [6.300,6.533],"path": [{"x": 450.540,"y": 65.370,"z": 359.750}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 6.500,"time": 0.267,"easeType": 21,"customEase": [],"floats": [6.533,6.800],"path": [{"x": 447.850,"y": 63.010,"z": 358.720}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 6.767,"time": 0.300,"easeType": 21,"customEase": [],"floats": [6.800,7.100],"path": [{"x": 447.816,"y": 63.027,"z": 358.701}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.067,"time": 0.133,"easeType": 21,"customEase": [],"floats": [7.100,7.233],"path": [{"x": 446.030,"y": 64.370,"z": 363.670}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.200,"time": 0.433,"easeType": 33,"customEase": [],"floats": [7.233,7.667],"path": [{"x": 446.030,"y": 64.370,"z": 363.670}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.633,"time": 0.200,"easeType": 21,"customEase": [],"floats": [7.667,7.867],"path": [{"x": 446.875,"y": 63.456,"z": 358.632}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.833,"time": 0.033,"easeType": 33,"customEase": [],"floats": [7.867,7.900],"path": [{"x": 446.651,"y": 63.525,"z": 358.159}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.867,"time": 0.033,"easeType": 33,"customEase": [],"floats": [7.900,7.933],"path": [{"x": 446.817,"y": 63.482,"z": 358.639}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.900,"time": 0.133,"easeType": 33,"customEase": [],"floats": [7.933,8.067],"path": [{"x": 446.730,"y": 63.520,"z": 358.650}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 8.033,"time": 0.133,"easeType": 21,"customEase": [],"floats": [8.067,8.200],"path": [{"x": 445.000,"y": 63.580,"z": 358.120}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 8.167,"time": 0.167,"easeType": 21,"customEase": [],"floats": [8.200,8.367],"path": [{"x": 442.330,"y": 63.630,"z": 355.240}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 8.333,"time": 0.133,"easeType": 21,"customEase": [],"floats": [8.367,8.500],"path": [{"x": 441.800,"y": 63.620,"z": 353.440}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 8.467,"time": 0.467,"easeType": 21,"customEase": [],"floats": [8.500,8.967],"path": [{"x": 443.340,"y": 63.940,"z": 353.120}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 8.933,"time": 0.200,"easeType": 21,"customEase": [],"floats": [8.967,9.167],"path": [{"x": 444.894,"y": 64.195,"z": 353.839}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 9.133,"time": 0.700,"easeType": 21,"customEase": [],"floats": [9.167,9.867],"path": [{"x": 444.990,"y": 64.220,"z": 353.810}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 9.833,"time": 0.067,"easeType": 33,"customEase": [],"floats": [9.867,9.933],"path": [{"x": 447.360,"y": 63.670,"z": 356.160}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 9.900,"time": 0.100,"easeType": 21,"customEase": [],"floats": [9.933,10.033],"path": [{"x": 447.320,"y": 63.660,"z": 356.000}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.000,"time": 0.067,"easeType": 21,"customEase": [],"floats": [10.033,10.100],"path": [{"x": 450.490,"y": 63.280,"z": 358.220}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.067,"time": 0.267,"easeType": 21,"customEase": [],"floats": [10.100,10.367],"path": [{"x": 451.470,"y": 63.170,"z": 358.800}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.333,"time": 0.067,"easeType": 33,"customEase": [],"floats": [10.367,10.433],"path": [{"x": 437.250,"y": 65.900,"z": 359.830}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.400,"time": 0.200,"easeType": 21,"customEase": [],"floats": [10.433,10.633],"path": [{"x": 438.250,"y": 66.570,"z": 360.940}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.600,"time": 0.867,"easeType": 21,"customEase": [],"floats": [10.633,11.500],"path": [{"x": 438.250,"y": 66.570,"z": 360.940}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 11.467,"time": 0.633,"easeType": 21,"customEase": [],"floats": [11.500,12.133],"path": [{"x": 449.560,"y": 63.930,"z": 357.690}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 12.100,"time": 3.233,"easeType": 21,"customEase": [],"floats": [12.133,15.367],"path": [{"x": 449.700,"y": 63.690,"z": 357.430}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 15.333,"time": 0.700,"easeType": 21,"customEase": [],"floats": [15.367,16.067],"path": [{"x": 445.590,"y": 65.490,"z": 357.160}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 0.567,"easeType": 21,"customEase": [],"path": [{"x": 0.610,"y": 261.693,"z": 0.523}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.567,"time": 0.433,"easeType": 21,"customEase": [],"path": [{"x": 351.240,"y": 251.036,"z": 4.851}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.000,"time": 0.767,"easeType": 21,"customEase": [],"path": [{"x": 338.868,"y": 255.148,"z": 359.698}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.767,"time": 0.067,"easeType": 33,"customEase": [],"path": [{"x": 351.014,"y": 129.428,"z": 0.130}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.833,"time": 0.900,"easeType": 21,"customEase": [],"path": [{"x": 2.662,"y": 129.454,"z": 0.128}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 2.733,"time": 0.067,"easeType": 33,"customEase": [],"path": [{"x": 359.789,"y": 249.994,"z": 348.055}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 2.800,"time": 0.533,"easeType": 21,"customEase": [],"path": [{"x": 354.171,"y": 253.204,"z": 351.243}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.333,"time": 0.067,"easeType": 33,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.400,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 0.001}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.533,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.600,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 1.403}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.700,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.767,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 1.071}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.833,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.900,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 2.517}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.000,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.067,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 2.638}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.167,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.233,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 1.415}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.367,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.433,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 1.441}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.500,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.567,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 1.042}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.633,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.767,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 1.467}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.833,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.900,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 1.911}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.967,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.033,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 3.636}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.167,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 357.306}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.233,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 350.760,"y": 181.672,"z": 2.125}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.300,"time": 0.067,"easeType": 33,"customEase": [],"path": [{"x": 348.895,"y": 248.887,"z": 4.748}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.367,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 334.069,"y": 249.009,"z": 5.044}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.533,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 331.421,"y": 250.608,"z": 4.747}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.800,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 358.345,"y": 243.417,"z": 4.884}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.967,"time": 0.300,"easeType": 21,"customEase": [],"path": [{"x": 3.059,"y": 231.873,"z": 2.758}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 6.267,"time": 0.233,"easeType": 21,"customEase": [],"path": [{"x": 3.960,"y": 210.049,"z": 1.484}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 6.500,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 349.635,"y": 185.258,"z": 0.394}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 6.767,"time": 0.300,"easeType": 21,"customEase": [],"path": [{"x": 349.702,"y": 186.422,"z": 0.669}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.067,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 352.409,"y": 186.327,"z": 359.957}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.200,"time": 0.433,"easeType": 33,"customEase": [],"path": [{"x": 352.409,"y": 186.327,"z": 359.957}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.633,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 354.292,"y": 202.044,"z": 1.655}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.833,"time": 0.033,"easeType": 33,"customEase": [],"path": [{"x": 353.879,"y": 202.155,"z": 3.118}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.867,"time": 0.033,"easeType": 33,"customEase": [],"path": [{"x": 355.018,"y": 202.641,"z": 0.785}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.900,"time": 0.133,"easeType": 33,"customEase": [],"path": [{"x": 354.164,"y": 203.109,"z": 4.112}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 8.033,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 0.370,"y": 165.204,"z": 0.853}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 8.167,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 352.170,"y": 107.915,"z": 2.476}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 8.333,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 343.133,"y": 78.933,"z": 0.788}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 8.467,"time": 0.467,"easeType": 21,"customEase": [],"path": [{"x": 359.475,"y": 64.503,"z": 1.120}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 8.933,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 10.155,"y": 54.811,"z": 359.058}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.133,"time": 0.700,"easeType": 21,"customEase": [],"path": [{"x": 11.412,"y": 52.967,"z": 358.488}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.833,"time": 0.067,"easeType": 33,"customEase": [],"path": [{"x": 354.452,"y": 230.671,"z": 0.668}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.900,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 354.459,"y": 230.159,"z": 0.717}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.000,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 354.427,"y": 233.426,"z": 0.401}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.067,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 354.412,"y": 237.510,"z": 0.003}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.333,"time": 0.067,"easeType": 33,"customEase": [],"path": [{"x": 17.233,"y": 161.149,"z": 358.835}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.400,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 22.142,"y": 176.163,"z": 0.849}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.600,"time": 0.867,"easeType": 21,"customEase": [],"path": [{"x": 22.142,"y": 176.163,"z": 0.849}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 11.467,"time": 0.633,"easeType": 21,"customEase": [],"path": [{"x": 359.301,"y": 241.721,"z": 357.748}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 12.100,"time": 3.233,"easeType": 21,"customEase": [],"path": [{"x": 359.352,"y": 243.023,"z": 357.732}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 15.333,"time": 0.700,"easeType": 21,"customEase": [],"path": [{"x": 2.980,"y": 232.648,"z": 359.434}
+],"objName": "SceneCamera",}
+,{"method": "playanimation","go": "CreateMonster","strings": ["close"],"floats": [2.000,0.200],"bools": [true],"objName": "2372","typeId": 12805}
+,{"method": "playanimation","go": "CreateMonster","delay": 16.000,"strings": ["open"],"floats": [1.000,0.200],"bools": [true],"objName": "2372","typeId": 12805}
+,{"method": "playanimation","go": "CreateMonster","delay": 18.600,"strings": ["opened"],"floats": [2.000,0.200],"bools": [true],"objName": "2372","typeId": 12805}
+,{"method": "playanimation","go": "Hero","strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2041",}
+,{"method": "playanimation","go": "Hero","delay": 0.867,"strings": ["cinema_1013_04"],"floats": [1.000,0.200],"bools": [false],"objName": "2041",}
+,{"method": "playanimation","go": "Hero","delay": 3.367,"strings": ["cinema_1013_06"],"floats": [2.000,0.200],"bools": [false],"objName": "2041",}
+,{"method": "playanimation","go": "Hero","delay": 5.333,"strings": ["cinema_1013_05"],"floats": [1.000,0.200],"bools": [false],"objName": "2041",}
+,{"method": "playanimation","go": "Hero","delay": 13.300,"strings": ["guard_02"],"floats": [2.000,0.200],"bools": [true],"objName": "2041",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 16.000,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3212",}
+],"objName": "2372","typeId": 12805}
+,{"method": "sendmessage","go": "CreateMonster","delay": 17.833,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3985",}
+],"objName": "2372","typeId": 12805}
+,{"method": "sendmessage","go": "CreateMonster","delay": 22.467,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3985",}
+],"objName": "2372","typeId": 12805}
+,{"method": "sendmessage","go": "Hero","delay": 3.367,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3367",}
+],"objName": "2041",}
+,{"method": "sendmessage","go": "Hero","strings": ["play_audio"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "8991",}
+],"objName": "2005",}
+]}

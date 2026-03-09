@@ -1,0 +1,56 @@
+{"takeName": "Take1(1)","inits": [{"type": "position","go": "Hero","position": {"x": 56.874,"y": 20.576,"z": 45.374}
+,"objName": "2005",}
+,{"type": "rotation","go": "Hero","rotation": {}
+,"objName": "2005",}
+,{"type": "position","go": "Camera","position": {"x": 60.444,"y": 24.792,"z": 47.552}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 36.819,"y": 242.672,"z": -0.001}
+,"objName": "SceneCamera",}
+,{"type": "position","go": "CreateMonster","position": {"x": 56.895,"y": 20.673,"z": 46.298}
+,"objName": "2005_emo","typeId": 12000}
+,{"type": "rotation","go": "CreateMonster","rotation": {}
+,"objName": "2005_emo","typeId": 12000}
+,{"type": "position","go": "/200514","position": {"x": 57.032,"y": 23.872,"z": 45.972}
+,"objName": "200514","typeId": 12001}
+,{"type": "rotation","go": "/200514","rotation": {}
+,"objName": "200514","typeId": 12001}
+],"actions": [{"method": "playanimation","go": "Hero","strings": ["skill_200512"],"floats": [1.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 1.000,"strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "moveto","go": "Hero","time": 0.967,"easeType": 21,"customEase": [],"path": [{"x": 56.874,"y": 20.576,"z": 45.374}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 0.967,"time": 0.033,"easeType": 21,"customEase": [],"path": [{"x": 10000.000,}
+],"objName": "2005",}
+,{"method": "rotateto","go": "Hero","time": 0.967,"easeType": 21,"customEase": [],"path": [{}
+],"objName": "2005",}
+,{"method": "rotateto","go": "Hero","delay": 0.967,"time": 0.033,"easeType": 21,"customEase": [],"path": [{"y": 10000.000,}
+],"objName": "2005",}
+,{"method": "moveto","go": "Camera","time": 0.233,"easeType": 21,"customEase": [],"path": [{"x": 57.904,"y": 23.070,"z": 46.286}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.233,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 57.975,"y": 23.123,"z": 46.352}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.300,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 58.006,"y": 23.146,"z": 46.380}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.367,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 57.936,"y": 23.094,"z": 46.315}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.433,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 57.900,"y": 23.067,"z": 46.282}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.533,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 57.864,"y": 23.040,"z": 46.249}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.633,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 57.924,"y": 23.085,"z": 46.304}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.767,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 57.904,"y": 23.070,"z": 46.286}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 0.233,"easeType": 21,"customEase": [],"path": [{"x": 28.764,"y": 227.208,"z": 359.632}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.233,"time": 0.033,"easeType": 21,"customEase": [],"path": [{"x": 27.341,"y": 227.219,"z": 359.637}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.267,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 27.784,"y": 226.500,"z": 359.302}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.333,"time": 0.133,"easeType": 21,"customEase": [],"path": [{"x": 27.097,"y": 226.659,"z": 359.375}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.467,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 28.406,"y": 226.870,"z": 359.472}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.667,"time": 0.300,"easeType": 21,"customEase": [],"path": [{"x": 28.764,"y": 227.208,"z": 359.632}
+],"objName": "SceneCamera",}
+,{"method": "playanimation","go": "CreateMonster","strings": ["skill200514_emo03_04"],"floats": [1.000,0.200],"bools": [true],"objName": "2005_emo","typeId": 12000}
+]}

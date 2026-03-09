@@ -1,0 +1,143 @@
+﻿{"takeName": "Take1(1)","inits": [{"type": "position","go": "Camera","position": {"x": 203.671,"y": 69.315,"z": 177.336}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 45.070,"y": 180.653,"z": 0.000}
+,"objName": "SceneCamera",}
+,{"type": "position","go": "CreateMonster","position": {"x": 149.451,"y": 57.851,"z": 169.530}
+,"objName": "2319","typeId": 11613}
+,{"type": "rotation","go": "CreateMonster","rotation": {"y": 270.000,}
+,"objName": "2319","typeId": 11613}
+,{"type": "position","go": "CreateMonster","position": {"x": 189.490,"y": 59.123,"z": 168.914}
+,"objName": "2313","typeId": 10647}
+,{"type": "rotation","go": "CreateMonster","rotation": {"y": 90.000,}
+,"objName": "2313","typeId": 10647}
+,{"type": "position","go": "CreateMonster","position": {"x": 121.924,"y": 58.160,"z": 132.412}
+,"objName": "fx_light1",}
+,{"type": "position","go": "CreateMonster","position": {"x": 177.375,"y": 58.370,"z": 131.426}
+,"objName": "fx_light2",}
+,{"type": "rotation","go": "CreateMonster","rotation": {"x": 65.870,"y": 262.408,"z": 43.872}
+,"objName": "fx_light3",}
+,{"type": "position","go": "CreateMonster","position": {"x": 192.184,"y": 64.540,"z": 168.781}
+,"objName": "fx_light3",}
+,{"type": "position","go": "CreateMonster","position": {"x": 149.369,"y": 58.160,"z": 169.228}
+,"objName": "fx_light4",}
+,{"type": "position","go": "CreateMonster","position": {"x": 111.751,"y": 59.123,"z": 168.602}
+,"objName": "2005","typeId": 11702}
+,{"type": "rotation","go": "CreateMonster","rotation": {"y": 270.000,}
+,"objName": "2005","typeId": 11702}
+,{"type": "position","go": "CreateMonster","position": {"x": 107.460,"y": 64.490,"z": 168.390}
+,"objName": "fx_light5",}
+,{"type": "rotation","go": "CreateMonster","rotation": {"x": 358.393,"y": 0.958,"z": 91.475}
+,"objName": "fx_light5",}
+],"actions": [{"method": "moveto","go": "Camera","time": 0.633,"easeType": 21,"customEase": [],"path": [{"x": 203.671,"y": 69.315,"z": 177.336}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.633,"time": 2.667,"easeType": 14,"customEase": [],"path": [{"x": 111.382,"y": 69.315,"z": 177.507}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.300,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"x": 111.382,"y": 69.315,"z": 177.508}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.300,"time": 2.333,"easeType": 14,"customEase": [],"path": [{"x": 122.305,"y": 69.315,"z": 143.861}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.633,"time": 1.333,"easeType": 21,"customEase": [],"path": [{"x": 122.305,"y": 69.315,"z": 143.861}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 8.967,"time": 1.667,"easeType": 14,"customEase": [],"path": [{"x": 177.017,"y": 69.315,"z": 143.898}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.633,"time": 2.000,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 177.017,"y": 69.315,"z": 143.898}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 12.633,"time": 2.333,"easeType": 14,"customEase": [],"path": [{"x": 150.415,"y": 69.315,"z": 181.024}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 14.967,"time": 1.667,"easeType": 21,"customEase": [],"path": [{"x": 150.415,"y": 69.315,"z": 181.024}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 16.633,"time": 2.533,"easeType": 21,"customEase": [],"path": [{"x": 150.415,"y": 69.315,"z": 181.024}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 19.167,"time": 1.800,"easeType": 14,"customEase": [],"path": [{"x": 191.844,"y": 69.315,"z": 178.446}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 20.967,"time": 3.667,"easeType": 21,"customEase": [],"path": [{"x": 191.844,"y": 69.315,"z": 178.446}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 3.300,"easeType": 21,"customEase": [],"path": [{"x": 45.067,"y": 180.194,"z": 359.815}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.300,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"x": 45.065,"y": 179.916,"z": 359.703}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.300,"time": 5.333,"easeType": 21,"customEase": [],"path": [{"x": 45.057,"y": 179.174,"z": 359.403}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.633,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"x": 45.053,"y": 178.896,"z": 359.291}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 12.633,"time": 6.533,"easeType": 21,"customEase": [],"path": [{"x": 45.038,"y": 177.987,"z": 358.925}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 19.167,"time": 5.467,"easeType": 21,"customEase": [],"path": [{"x": 45.033,"y": 177.737,"z": 358.824}
+],"objName": "SceneCamera",}
+,{"method": "playanimation","go": "CreateMonster","strings": ["default"],"floats": [2.000,0.200],"bools": [false],"objName": "2319","typeId": 11613}
+,{"method": "playanimation","go": "CreateMonster","delay": 14.133,"strings": ["spawn_07"],"floats": [1.000,0.200],"bools": [false],"objName": "2319","typeId": 11613}
+,{"method": "playanimation","go": "CreateMonster","delay": 16.633,"strings": ["walk"],"floats": [2.000,0.200],"bools": [true],"objName": "2319","typeId": 11613}
+,{"method": "moveto","go": "CreateMonster","time": 16.633,"easeType": 21,"customEase": [],"path": [{"x": 149.451,"y": 57.851,"z": 169.530}
+],"objName": "2319","typeId": 11613}
+,{"method": "moveto","go": "CreateMonster","delay": 16.633,"time": 6.000,"easeType": 32,"customEase": [0.000,0.000,1.000,1.000,1.000,1.000,1.000,1.000],"path": [{"x": 132.796,"y": 57.851,"z": 169.530}
+],"objName": "2319","typeId": 11613}
+,{"method": "playanimation","go": "CreateMonster","strings": ["default"],"floats": [2.000,0.200],"bools": [false],"objName": "2313","typeId": 10647}
+,{"method": "playanimation","go": "CreateMonster","delay": 19.967,"strings": ["attack"],"floats": [1.000,0.200],"bools": [true],"objName": "2313","typeId": 10647}
+,{"method": "playanimation","go": "CreateMonster","delay": 21.467,"strings": ["attack"],"floats": [1.000,0.200],"bools": [true],"objName": "2313","typeId": 10647}
+,{"method": "playanimation","go": "CreateMonster","delay": 22.967,"strings": ["die"],"floats": [1.000,0.200],"bools": [true],"objName": "2313","typeId": 10647}
+,{"method": "sendmessage","go": "CreateMonster","delay": 7.633,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3034",}
+],"objName": "fx_light1",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 8.267,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3034",}
+],"objName": "fx_light1",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 8.300,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3035",}
+],"objName": "fx_light1",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 10.633,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3035",}
+],"objName": "fx_light1",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 10.633,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3034",}
+],"objName": "fx_light2",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 11.267,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3034",}
+],"objName": "fx_light2",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 11.300,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3035",}
+],"objName": "fx_light2",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 11.933,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3035",}
+],"objName": "fx_light2",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 11.967,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3082",}
+],"objName": "fx_light2",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 14.133,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3082",}
+],"objName": "fx_light2",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 3.300,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u6467\u6BC1\u654C\u65B9\u6C34\u6676\u83B7\u5F97\u80DC\u5229\uFF0C\u4F46\u9700\u501F\u52A9\u7279\u6B8A\u7684\u529B\u91CF\uFF01",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","delay": 6.133,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","delay": 7.133,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u4E89\u593A\u5DE6\u53F3\u4E24\u5927\u636E\u70B9\u6240\u6709\u6743\uFF01",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","delay": 12.633,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","delay": 14.967,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u5DE6\u53F3\u636E\u70B9\u88AB\u5DF1\u65B9\u5360\u9886\u53EF\u524D\u5F80\u4E2D\u592E\u53EC\u5524\u70B9\u53EC\u5524\u795E\u5175\uFF01",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","delay": 19.167,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","delay": 20.967,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u5F53\u654C\u4EBA\u8FDB\u653B\u65F6\uFF0C\u4FDD\u536B\u5DF1\u65B9\u6C34\u6676\uFF01",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","delay": 23.900,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2319","typeId": 11613}
+,{"method": "sendmessage","go": "CreateMonster","strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3095",}
+],"objName": "fx_light3",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 0.033,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3095",}
+],"objName": "fx_light3",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 22.967,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3095",}
+],"objName": "fx_light3",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 23.633,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3095",}
+],"objName": "fx_light3",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 14.967,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3034",}
+],"objName": "fx_light4",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 20.300,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3034",}
+],"objName": "fx_light4",}
+,{"method": "moveto","go": "CreateMonster","time": 6.633,"easeType": 21,"customEase": [],"path": [{"x": 111.751,"y": 59.123,"z": 168.602}
+],"objName": "2005","typeId": 11702}
+,{"method": "moveto","go": "CreateMonster","delay": 6.633,"time": 0.033,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 204.818,"y": 59.834,"z": 168.328}
+],"objName": "2005","typeId": 11702}
+,{"method": "rotateto","go": "CreateMonster","time": 6.633,"easeType": 21,"customEase": [],"path": [{"y": 270.000,}
+],"objName": "2005","typeId": 11702}
+,{"method": "rotateto","go": "CreateMonster","delay": 6.633,"time": 0.033,"easeType": 21,"customEase": [],"path": [{"y": 270.000,}
+],"objName": "2005","typeId": 11702}
+,{"method": "playanimation","go": "CreateMonster","strings": ["guard"],"floats": [2.000,0.200],"bools": [true],"objName": "2005","typeId": 11702}
+,{"method": "sendmessage","go": "CreateMonster","strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3096",}
+],"objName": "fx_light5",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 0.033,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3096",}
+],"objName": "fx_light5",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 3.300,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3096",}
+],"objName": "fx_light5",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 5.333,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "3096",}
+],"objName": "fx_light5",}
+]}

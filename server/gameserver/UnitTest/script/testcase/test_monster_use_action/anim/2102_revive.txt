@@ -1,0 +1,9 @@
+{"takeName": "Take1(1)","inits": [{"type": "position","go": "/SceneCamera","position": {"x": 223.628,"y": 189.556,"z": 410.997}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "/SceneCamera","rotation": {"x": 90.000,}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "/SceneCamera","time": 2.500,"easeType": 21,"customEase": [],"path": [{"x": 10001.000,}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "/SceneCamera","time": 2.500,"easeType": 21,"customEase": [],"path": [{"y": 10001.000,}
+],"objName": "SceneCamera",}
+]}

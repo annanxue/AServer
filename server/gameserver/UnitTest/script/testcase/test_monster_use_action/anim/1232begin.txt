@@ -1,0 +1,43 @@
+﻿{"takeName": "Take1(1)","inits": [{"type": "position","go": "Camera","position": {"x": 743.512,"y": 322.523,"z": 893.636}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 1.197,"y": 271.050,"z": 1.679}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "Camera","time": 0.667,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"floats": [0.042,0.708],"path": [{"x": 743.512,"y": 322.523,"z": 893.636}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.667,"time": 1.167,"easeType": 21,"customEase": [],"floats": [0.708,1.875],"path": [{"x": 619.438,"y": 335.054,"z": 890.167}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.833,"time": 1.542,"easeType": 21,"customEase": [],"floats": [1.875,3.417],"path": [{"x": 618.555,"y": 334.439,"z": 890.141}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.375,"time": 0.042,"easeType": 33,"customEase": [],"floats": [3.417,3.458],"path": [{"x": 611.708,"y": 333.051,"z": 890.167}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.417,"time": 2.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"floats": [3.458,5.500],"path": [{"x": 611.708,"y": 333.052,"z": 890.167}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.458,"time": 0.042,"easeType": 33,"customEase": [],"floats": [5.500,5.542],"path": [{"x": 614.900,"y": 333.272,"z": 892.183}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.500,"time": 4.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"floats": [5.542,9.583],"path": [{"x": 614.900,"y": 333.272,"z": 892.183}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 0.667,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 1.197,"y": 271.050,"z": 1.679}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.667,"time": 1.167,"easeType": 21,"customEase": [],"path": [{"x": 15.160,"y": 271.087,"z": 1.942}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.833,"time": 1.542,"easeType": 21,"customEase": [],"path": [{"x": 15.160,"y": 271.087,"z": 1.942}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.375,"time": 0.042,"easeType": 33,"customEase": [],"path": [{"x": 15.160,"y": 196.903,"z": 1.942}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.417,"time": 2.042,"easeType": 21,"customEase": [],"path": [{"x": 15.160,"y": 196.903,"z": 1.942}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.458,"time": 0.042,"easeType": 33,"customEase": [],"path": [{"x": 15.160,"y": 287.175,"z": 1.942}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.500,"time": 4.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 15.160,"y": 287.175,"z": 1.942}
+],"objName": "SceneCamera",}
+,{"method": "sendmessage","go": "Monster","delay": 1.833,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "123206",}
+],"objName": "2323_01","cinemaIdx": 106,"typeId": 10745}
+,{"method": "sendmessage","go": "Monster","delay": 5.458,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2323_01","cinemaIdx": 106,"typeId": 10745}
+,{"method": "sendmessage","go": "Monster","delay": 5.500,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "123207",}
+],"objName": "2323_01","cinemaIdx": 106,"typeId": 10745}
+,{"method": "sendmessage","go": "Monster","delay": 9.542,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2323_01","cinemaIdx": 106,"typeId": 10745}
+,{"method": "sendmessage","go": "Hero","delay": 1.833,"strings": ["play_audio"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "8998",}
+],"objName": "2005",}
+]}

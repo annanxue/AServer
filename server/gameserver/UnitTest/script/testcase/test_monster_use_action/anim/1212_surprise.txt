@@ -1,0 +1,28 @@
+﻿{"takeName": "Take1(1)(1)","inits": [{"type": "position","go": "Hero","position": {"x": 532.537,"y": 98.874,"z": 485.187}
+,"objName": "2005",}
+,{"type": "rotation","go": "Hero","rotation": {"y": 180.000,}
+,"objName": "2005",}
+,{"type": "position","go": "/SceneCamera","position": {"x": 533.589,"y": 101.484,"z": 485.557}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "/SceneCamera","rotation": {"x": 39.570,"y": 209.290,"z": 0.000}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "Hero","time": 3.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 532.537,"y": 98.874,"z": 485.187}
+],"objName": "2005",}
+,{"method": "rotateto","go": "Hero","time": 3.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"y": 180.000,}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 2.042,"strings": ["color_correction"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","strings": ["act_02"],"floats": [1.000,0.200],"bools": [false],"objName": "2005",}
+,{"method": "moveto","go": "/SceneCamera","time": 1.333,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 533.589,"y": 101.484,"z": 485.557}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "/SceneCamera","delay": 1.333,"time": 0.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 537.075,"y": 104.897,"z": 490.340}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "/SceneCamera","delay": 1.375,"time": 1.667,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 537.075,"y": 104.897,"z": 490.340}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "/SceneCamera","time": 1.333,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 39.570,"y": 209.290,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "/SceneCamera","delay": 1.333,"time": 0.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 37.679,"y": 221.666,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "/SceneCamera","delay": 1.375,"time": 1.667,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 37.679,"y": 221.666,"z": 0.000}
+],"objName": "SceneCamera",}
+]}

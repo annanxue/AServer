@@ -1,0 +1,45 @@
+{"takeName": "Take1(1)(1)","inits": [{"type": "position","go": "Camera","position": {"x": 86.987,"y": 28.834,"z": 282.011}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 41.870,"y": 90.384,"z": 0.179}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "Camera","time": 1.208,"easeType": 21,"customEase": [],"path": [{"x": 86.987,"y": 28.834,"z": 282.011}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.208,"time": 3.833,"easeType": 21,"customEase": [],"path": [{"x": 238.543,"y": 28.834,"z": 282.011}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.042,"time": 2.917,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 238.543,"y": 28.834,"z": 282.011}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.958,"time": 1.500,"easeType": 32,"customEase": [0.000,0.000,1.000,1.000,1.000,1.000,1.000,1.000],"path": [{"x": 123.359,"y": 28.834,"z": 282.011}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 9.458,"time": 3.833,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 123.359,"y": 28.834,"z": 282.011}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 0.583,"easeType": 21,"customEase": [],"path": [{"x": 24.026,"y": 90.051,"z": 359.986}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.583,"time": 0.625,"easeType": 21,"customEase": [],"path": [{"x": 24.026,"y": 90.051,"z": 359.986}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.208,"time": 3.833,"easeType": 21,"customEase": [],"path": [{"x": 27.060,"y": 90.078,"z": 359.988}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.042,"time": 2.917,"easeType": 21,"customEase": [],"path": [{"x": 27.060,"y": 90.078,"z": 359.988}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.958,"time": 0.208,"easeType": 21,"customEase": [],"path": [{"x": 35.776,"y": 90.085,"z": 0.003}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 8.167,"time": 1.292,"easeType": 21,"customEase": [],"path": [{"x": 32.949,"y": 90.082,"z": -0.002}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.458,"time": 3.833,"easeType": 21,"customEase": [],"path": [{"x": 32.949,"y": 90.082,"z": -0.002}
+],"objName": "SceneCamera",}
+,{"method": "sendmessage","go": "CreateMonster","strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "Sphere",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 0.583,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u4ECE\u8FD9\u6761\u8DEF\u5F80\u540E\uFF0C\u5C31\u662F\u4E2D\u5FC3\u5B9E\u9A8C\u5BA4\u4E86\uFF0C\u8FD9\u91CC\u53EF\u80FD\u6709\u57CB\u4F0F\uFF01",}
+],"objName": "Sphere",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 4.708,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "Sphere",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 5.042,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u542F\u52A8\u5B9E\u9A8C\u5BA4\u7684\u5927\u95E8\u9700\u8981\u4E00\u6BB5\u65F6\u95F4\uFF0C\u5728\u542F\u52A8\u4E4B\u524D\uFF0C\u4E0D\u80FD\u8BA9\u654C\u4EBA\u9760\u8FD1\uFF01",}
+],"objName": "Sphere",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 7.958,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "Sphere",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 8.167,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u6765\u8FD9\u513F\uFF01",}
+],"objName": "Sphere",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 10.000,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u5B88\u4F4F\u8FD9\u6761\u8DEF\u4E0A\u7684\u4E09\u4E2A\u673A\u5173\uFF0C\u4E0D\u8981\u8BA9\u654C\u4EBA\u6253\u7834\u4ED6\u4EEC\uFF01\r\n",}
+],"objName": "Sphere",}
+,{"method": "sendmessage","go": "CreateMonster","delay": 13.292,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "Sphere",}
+]}

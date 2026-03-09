@@ -1,0 +1,29 @@
+﻿{"takeName": "uplift","inits": [{"type": "position","go": "Hero","position": {"x": 10000.000,}
+,"objName": "2005",}
+,{"type": "orientation","go": "Hero","position": {"x": 68.000,"y": 41.992,"z": 349.000}
+,"objName": "2005",}
+,{"type": "position","go": "CreateMonster","position": {"x": 68.000,"y": 41.992,"z": 349.000}
+,"objName": "Target1",}
+,{"type": "position","go": "/trigger/2929","position": {"x": 68.420,"y": 44.365,"z": 349.221}
+,"objName": "2929",}
+],"actions": [{"method": "moveto","go": "Hero","time": 2.458,"easeType": 21,"customEase": [],"floats": [0.042,2.500],"path": [{"x": 70.182,"y": 42.252,"z": 349.387}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 2.458,"time": 5.000,"easeType": 21,"customEase": [],"floats": [2.500,7.500],"path": [{"x": 69.551,"y": 62.373,"z": 349.008}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 7.458,"time": 2.083,"easeType": 21,"customEase": [],"floats": [7.500,9.583],"path": [{"x": 62.098,"y": 62.573,"z": 349.005}
+],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","strings": ["walk"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 2.458,"strings": ["guard"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 7.458,"strings": ["run_battle"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 9.542,"strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "moveto","go": "CreateMonster","time": 2.458,"easeType": 21,"customEase": [],"floats": [0.042,2.500],"path": [{"x": 68.000,"y": 41.992,"z": 349.000}
+],"objName": "Target1",}
+,{"method": "moveto","go": "CreateMonster","delay": 2.458,"time": 5.000,"easeType": 21,"customEase": [],"floats": [2.500,7.500],"path": [{"x": 68.000,"y": 62.500,"z": 349.000}
+],"objName": "Target1",}
+,{"method": "moveto","go": "CreateMonster","delay": 7.458,"time": 2.042,"easeType": 21,"customEase": [],"floats": [7.500,9.542],"path": [{"x": 61.545,"y": 62.500,"z": 348.998}
+],"objName": "Target1",}
+,{"method": "moveto","go": "/trigger/2929","delay": 2.458,"time": 5.000,"easeType": 21,"customEase": [],"floats": [2.500,7.500],"path": [{"x": 68.420,"y": 64.290,"z": 349.221}
+],"objName": "2929",}
+,{"method": "sendmessage","go": "Hero","strings": ["play_audio"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "9044",}
+],"objName": "2005",}
+]}

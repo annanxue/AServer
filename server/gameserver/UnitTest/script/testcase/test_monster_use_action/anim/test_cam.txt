@@ -1,0 +1,13 @@
+{"takeName": "Take1","inits": [{"type": "position","go": "SceneCamera","position": {"x": 320.576,"y": 39.726,"z": 283.199}
+,}
+,{"type": "rotation","go": "SceneCamera","rotation": {"x": 0.369,"y": 0.180,"z": 0.028}
+,}
+],"actions": [{"method": "moveto","go": "SceneCamera","time": 3.958,"easeType": 21,"customEase": [],"path": [{"x": 320.576,"y": 39.726,"z": 283.199}
+,{"x": 333.673,"y": 39.726,"z": 290.296}
+,{"x": 325.850,"y": 39.619,"z": 301.775}
+],}
+,{"method": "rotateto","go": "SceneCamera","time": 1.958,"easeType": 21,"customEase": [],"path": [{"x": 41.510,"y": 287.849,"z": 14.119}
+],}
+,{"method": "rotateto","go": "SceneCamera","delay": 1.958,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"x": 41.510,"y": 188.288,"z": 14.119}
+],}
+]}

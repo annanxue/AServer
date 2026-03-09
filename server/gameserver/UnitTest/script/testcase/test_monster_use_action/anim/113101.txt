@@ -1,0 +1,17 @@
+﻿{"takeName": "Take1(1)","inits": [{"type": "position","go": "Camera","position": {"x": 10001.000,}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"y": 10001.000,}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "Camera","time": 2.500,"easeType": 21,"customEase": [],"path": [{"x": 10001.000,}
+,{"x": 199.580,"y": 86.430,"z": 214.190}
+,{"x": 199.240,"y": 89.290,"z": 214.280}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 2.500,"time": 0.467,"easeType": 21,"customEase": [],"path": [{"x": 199.270,"y": 89.370,"z": 214.280}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 1.400,"easeType": 21,"customEase": [],"path": [{"x": 16.326,"y": 270.000,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.400,"time": 1.100,"easeType": 21,"customEase": [],"path": [{"x": 37.748,"y": 270.000,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 2.500,"time": 0.467,"easeType": 21,"customEase": [],"path": [{"x": 37.748,"y": 270.000,"z": 0.000}
+],"objName": "SceneCamera",}
+]}

@@ -1,0 +1,111 @@
+﻿{"takeName": "Take1(1)","inits": [{"type": "position","go": "Monster","position": {"x": 30.780,"y": 74.140,"z": 52.290}
+,"objName": "2324_02","cinemaIdx": 188,}
+,{"type": "rotation","go": "Monster","rotation": {}
+,"objName": "2324_02","cinemaIdx": 188,}
+,{"type": "position","go": "Camera","position": {"x": 33.633,"y": 76.098,"z": 59.883}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 6.294,"y": 203.858,"z": 0.000}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "playanimation","go": "Monster","strings": ["cinema_1111_01"],"floats": [1.000,0.200],"bools": [true],"objName": "2324_02","cinemaIdx": 188,}
+,{"method": "playanimation","go": "Monster","delay": 0.967,"strings": ["cinema_1111"],"floats": [1.000,0.200],"bools": [true],"objName": "2324_02","cinemaIdx": 188,}
+,{"method": "moveto","go": "Camera","time": 0.233,"easeType": 21,"customEase": [],"path": [{"x": 33.339,"y": 76.348,"z": 59.234}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.233,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 31.920,"y": 74.680,"z": 54.530}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.300,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 31.904,"y": 74.789,"z": 54.504}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.400,"time": 0.533,"easeType": 21,"customEase": [],"path": [{"x": 31.830,"y": 74.810,"z": 54.370}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.933,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 16.521,"y": 78.429,"z": 56.871}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.000,"time": 2.233,"easeType": 21,"customEase": [],"path": [{"x": 16.521,"y": 78.429,"z": 56.871}
+,{"x": 16.026,"y": 78.803,"z": 57.052}
+,{"x": 15.833,"y": 78.813,"z": 57.321}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.233,"time": 0.433,"easeType": 21,"customEase": [],"path": [{"x": 15.833,"y": 78.813,"z": 57.321}
+,{"x": 14.690,"y": 79.380,"z": 57.900}
+,{"x": 14.140,"y": 78.890,"z": 57.610}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.667,"time": 0.300,"easeType": 21,"customEase": [],"path": [{"x": 14.140,"y": 78.890,"z": 57.610}
+,{"x": 14.060,"y": 78.980,"z": 57.890}
+,{"x": 16.076,"y": 79.219,"z": 58.677}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.967,"time": 0.633,"easeType": 21,"customEase": [],"path": [{"x": 16.076,"y": 79.219,"z": 58.677}
+,{"x": 20.130,"y": 79.370,"z": 57.640}
+,{"x": 22.010,"y": 79.560,"z": 57.360}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 4.600,"time": 0.533,"easeType": 21,"customEase": [],"path": [{"x": 24.590,"y": 78.660,"z": 57.010}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.133,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 31.640,"y": 75.256,"z": 56.250}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.333,"time": 2.100,"easeType": 21,"customEase": [],"path": [{"x": 31.640,"y": 75.256,"z": 56.250}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.433,"time": 1.933,"easeType": 21,"customEase": [],"path": [{"x": 31.640,"y": 75.256,"z": 56.250}
+,{"x": 31.547,"y": 75.137,"z": 55.528}
+,{"x": 31.547,"y": 75.137,"z": 55.528}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 9.367,"time": 0.433,"easeType": 21,"customEase": [],"path": [{"x": 31.547,"y": 75.137,"z": 55.528}
+,{"x": 31.566,"y": 75.107,"z": 55.677}
+,{"x": 31.441,"y": 76.405,"z": 55.993}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 9.800,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 31.441,"y": 76.405,"z": 55.993}
+,{"x": 30.838,"y": 76.688,"z": 55.754}
+,{"x": 30.600,"y": 74.510,"z": 55.190}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.067,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 30.600,"y": 74.510,"z": 55.190}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 10.133,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 30.600,"y": 74.510,"z": 55.190}
+,{"x": 30.596,"y": 74.639,"z": 55.190}
+,{"x": 30.596,"y": 74.639,"z": 55.190}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 0.233,"easeType": 21,"customEase": [],"path": [{"x": 9.555,"y": 203.858,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.233,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 352.422,"y": 208.120,"z": 359.753}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.300,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 350.585,"y": 208.128,"z": 359.751}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.400,"time": 0.533,"easeType": 21,"customEase": [],"path": [{"x": 350.585,"y": 208.128,"z": 359.751}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.933,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 349.894,"y": 252.330,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.000,"time": 0.733,"easeType": 21,"customEase": [],"path": [{"x": 352.473,"y": 247.518,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.733,"time": 1.500,"easeType": 21,"customEase": [],"path": [{"x": 352.499,"y": 242.700,"z": 0.630}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.233,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 353.962,"y": 210.699,"z": 4.503}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.500,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 343.092,"y": 217.085,"z": 3.868}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.667,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 343.092,"y": 205.431,"z": 3.868}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.867,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 351.041,"y": 167.840,"z": 0.963}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.967,"time": 0.367,"easeType": 21,"customEase": [],"path": [{"x": 343.755,"y": 161.870,"z": 2.498}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.333,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 343.552,"y": 165.287,"z": 1.833}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.600,"time": 0.533,"easeType": 21,"customEase": [],"path": [{"x": 338.308,"y": 165.918,"z": 2.223}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.133,"time": 0.200,"easeType": 21,"customEase": [],"path": [{"x": 354.191,"y": 187.357,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 5.333,"time": 2.100,"easeType": 21,"customEase": [],"path": [{"x": 354.191,"y": 187.357,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.433,"time": 0.333,"easeType": 21,"customEase": [],"path": [{"x": 348.777,"y": 187.357,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 7.767,"time": 1.600,"easeType": 21,"customEase": [],"path": [{"x": 348.777,"y": 187.357,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.367,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 345.586,"y": 194.577,"z": 358.386}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.533,"time": 0.267,"easeType": 21,"customEase": [],"path": [{"x": 339.579,"y": 196.592,"z": 359.226}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.800,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 343.634,"y": 192.249,"z": 358.861}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 9.967,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 339.935,"y": 192.327,"z": 358.837}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.067,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 339.935,"y": 192.327,"z": 358.837}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.133,"time": 0.100,"easeType": 21,"customEase": [],"path": [{"x": 344.288,"y": 192.235,"z": 358.865}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 10.233,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 343.634,"y": 192.249,"z": 358.861}
+],"objName": "SceneCamera",}
+]}

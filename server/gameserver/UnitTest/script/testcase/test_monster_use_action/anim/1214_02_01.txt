@@ -1,0 +1,17 @@
+{"takeName": "Take1(1)(2)","inits": [{"type": "position","go": "Camera","position": {"x": 28.468,"y": -29.114,"z": 32.268}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 4.048,"y": 281.963,"z": 0.306}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "Camera","time": 4.542,"easeType": 21,"customEase": [],"path": [{"x": 28.468,"y": -29.114,"z": 32.268}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 4.542,"easeType": 21,"customEase": [],"path": [{"x": 4.048,"y": 281.963,"z": 0.306}
+],"objName": "SceneCamera",}
+,{"method": "sendmessage","go": "Hero","delay": 0.375,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u522B\u9AD8\u5174\u5F97\u592A\u65E9",}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 2.208,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 2.375,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u4F60\u8DD1\u4E0D\u51FA\u6211\u7684\u624B\u638C\u5FC3\uFF01\r\r",}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 4.250,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2005",}
+]}

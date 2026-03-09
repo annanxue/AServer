@@ -1,0 +1,48 @@
+AppConfig = 
+{
+    Daemon = 1,         --是否(1/0)后台模式启动
+    TimerSize = 1024,   --Timer预生成的内存块大小
+
+    --配置日志文件路径和日志等级
+    Log = 
+    {
+        LogPathPrefix = "./log/db",     
+        ErrLevel = 4,
+        LogLevel = 2,
+        TraceLevel = 2,
+        ProfLevel = 2,
+    },
+
+    --配置lua脚本目录和入口脚本
+    Lua = 
+    {
+        path = "./script",
+        main_file = "main.lua", 
+    },
+
+    LogicFrameRate = 5,            -- 逻辑线程帧率 
+
+    --配置dbserver
+    DbSvr =
+    {
+        MaxCon = 4096,              -- max socket = 4096<<2
+        Port = 19118,               -- 监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        ProcThreadNum = 4,          -- 处理读写多线程设置
+        ServerId = 0,
+    },
+
+    GMClient =
+    {
+        IP = "123.59.41.92",         -- GMSvr的IP
+        Port = 9120,                -- GMSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 5000,        -- 和gm server断开连接后的重连间隔
+    },
+
+    --数据库配置文件
+    MysqlCfg = "./mysql.lua",
+}
+

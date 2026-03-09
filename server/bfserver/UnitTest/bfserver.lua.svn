@@ -1,0 +1,83 @@
+AppConfig = 
+{
+    Daemon = 1,         --是否(1/0)后台模式启动
+    TimerSize = 1024,   --Timer预生成的内存块大小
+
+    Resource = "./resource",
+
+    HttpTaskNum = 1,
+
+    --配置日志路径和等级
+    Log =
+    {
+        LogPathPrefix = "./log/game",
+        ErrLevel = 4,
+        LogLevel = 2,
+        TraceLevel = 2,
+        ProfLevel = 2,
+    },
+ 
+    --配置lua脚本目录和入口
+    Lua = 
+    {
+        Path = "./script/",         --Lua文件所在位置
+        MainFile = "main.lua",      
+    },
+
+    LogicFrameRate = 10,            -- 逻辑线程帧率 
+
+    GMClient =
+    {
+        IP = "123.59.41.92",         -- GMSvr的IP
+        Port = 9120,                -- GMSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 5000,        -- 和gm server断开连接后的重连间隔
+    },
+
+    --配置gameserver for client
+    GameSvr =
+    {
+        MaxCon = 4096,                  -- max socket = 4096<<2
+        IP = "0.0.0.0",                 -- 监听的IP
+        IPToClient = "192.168.15.9",    -- 客户端连接的IP地址，作为字符串发给客户端
+        Port = 11112,                   -- 监听端口
+        Crypt = 1,                      -- 是否加密
+        PollWaitTime = 100,             -- epoll wait time
+        ProcThreadNum = 4,              -- 多线程读写设置
+        ServerId = 0,
+        TimeOutTime = 25,
+    },
+
+    --配置bfserver for game
+    BFSvr =
+    {
+        MaxCon = 4096,              -- max socket = 4096<<2
+        IP = "192.168.15.9",           -- 监听的IP
+        Port = 11123,               -- 监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        ProcThreadNum = 4,          -- 多线程读写设置
+        ServerId = 0,               -- bf id
+        BFNumMax = 2,               -- bf max
+    },
+
+    LogClient =
+    {   
+        IP = "127.0.0.1",           -- LogSvr的IP
+        Port = 9121,                -- LogSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 1000,           -- 和log server断开连接后的重连间隔
+        CertifyCode = "b99fef3a96e2f9837f6be7366f34e4f4fd2bbc9b",     -- 验证码
+    },  
+
+    --游戏服列表及分区列表
+    GameSvrConfigUrl = "http://120.25.106.247:3000/GameListOverSea/",
+
+    PlatformTag = "BF1PlatformTag",
+
+    MIPushTag = "39",
+    GameID = "12345",
+}
+

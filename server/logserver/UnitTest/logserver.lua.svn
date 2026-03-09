@@ -1,0 +1,50 @@
+AppConfig = 
+{
+    Daemon = 1,         --是否(1/0)后台模式启动
+    TimerSize = 1024,   --Timer预生成的内存块大小
+
+    HttpTaskNum = 4,
+
+    --配置日志文件路径和日志等级
+    Log = 
+    {
+        LogPathPrefix = "./log/log",     
+        ErrLevel = 4,
+        LogLevel = 2,
+        TraceLevel = 2,
+        ProfLevel = 2,
+    },
+
+    --配置lua脚本目录和入口脚本
+    Lua = 
+    {
+        Path = "./script",
+        MainFile = "main.lua", 
+    },
+
+    LogicFrameRate = 10,            -- 逻辑线程帧率 
+
+    --配置logserver
+    LogSvr =
+    {
+        MaxCon = 1024,              -- max socket = 4096<<2
+        Port = 10040,                -- 监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        ProcThreadNum = 4,          -- 处理读写多线程设置
+        ServerId = 0,
+        CertifyCode = "b99fef3a96e2f9837f6be7366f34e4f4fd2bbc9b",     -- 验证码
+    },
+
+    GMClient =
+    {
+        IP = "123.59.41.92",         -- GMSvr的IP
+        Port = 9120,                -- GMSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 5000,        -- 和gm server断开连接后的重连间隔
+    },
+
+    --IsSyslogOpen = 1,
+}
+

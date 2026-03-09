@@ -1,0 +1,47 @@
+{"takeName": "Take2","inits": [{"type": "position","go": "Monster","position": {"x": 31.196,"y": 49.939,"z": 101.262}
+,"objName": "\u5E7D\u623E\u9B42\u9B54_1","cinemaIdx": 72,"typeId": 10006}
+,{"type": "position","go": "Camera","position": {"x": 59.043,"y": 60.099,"z": 99.085}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 11.077,"y": 267.007,}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "playanimation","go": "Monster","strings": ["spawn_02"],"floats": [2.000,0.300],"bools": [true],"objName": "mage1","cinemaIdx": 100,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","delay": 3.708,"strings": ["skill_230201"],"floats": [1.000,0.300],"bools": [true],"objName": "mage1","cinemaIdx": 100,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","strings": ["spawn_02"],"floats": [2.000,0.300],"bools": [true],"objName": "mage2","cinemaIdx": 101,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","delay": 3.708,"strings": ["skill_230201"],"floats": [1.000,0.300],"bools": [true],"objName": "mage2","cinemaIdx": 101,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","strings": ["spawn_02"],"floats": [2.000,0.300],"bools": [true],"objName": "mage3","cinemaIdx": 102,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","delay": 3.708,"strings": ["skill_230201"],"floats": [1.000,0.300],"bools": [true],"objName": "mage3","cinemaIdx": 102,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","strings": ["spawn_02"],"floats": [2.000,0.300],"bools": [true],"objName": "mage4","cinemaIdx": 103,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","delay": 3.708,"strings": ["guard"],"floats": [1.000,0.300],"bools": [true],"objName": "mage4","cinemaIdx": 103,"typeId": 10024}
+,{"method": "playanimation","go": "Monster","strings": ["guard_test"],"floats": [1.000,0.300],"bools": [true],"objName": "\u5E7D\u623E\u9B42\u9B54_1","cinemaIdx": 72,"typeId": 10006}
+,{"method": "playanimation","go": "Monster","delay": 6.417,"strings": ["spawn"],"floats": [1.000,0.300],"bools": [true],"objName": "\u5E7D\u623E\u9B42\u9B54_1","cinemaIdx": 72,"typeId": 10006}
+,{"method": "playanimation","go": "Monster","delay": 10.667,"strings": ["act"],"floats": [1.000,0.300],"bools": [true],"objName": "\u5E7D\u623E\u9B42\u9B54_1","cinemaIdx": 72,"typeId": 10006}
+,{"method": "moveto","go": "Camera","time": 13.083,"easeType": 21,"customEase": [],"path": [{"x": 59.043,"y": 60.099,"z": 99.085}
+,{"x": 44.938,"y": 54.823,"z": 100.617}
+,{"x": 44.938,"y": 54.823,"z": 100.617}
+,{"x": 43.659,"y": 59.646,"z": 101.291}
+,{"x": 42.797,"y": 57.735,"z": 101.246}
+,{"x": 42.200,"y": 53.911,"z": 101.586}
+,{"x": 42.200,"y": 53.911,"z": 101.586}
+,{"x": 10001.000,}
+],"objName": "SceneCamera",}
+,{"method": "sendmessage","go": "Monster","strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 100,"typeId": 10024}
+,{"method": "sendmessage","go": "Monster","delay": 6.417,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 100,"typeId": 10024}
+,{"method": "sendmessage","go": "Monster","delay": 0.042,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 101,"typeId": 10024}
+,{"method": "sendmessage","go": "Monster","delay": 6.417,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 101,"typeId": 10024}
+,{"method": "sendmessage","go": "Monster","delay": 0.042,"strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 102,"typeId": 10024}
+,{"method": "sendmessage","go": "Monster","delay": 6.417,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 102,"typeId": 10024}
+,{"method": "sendmessage","go": "Monster","strings": ["fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 103,"typeId": 10024}
+,{"method": "sendmessage","go": "Monster","delay": 6.375,"strings": ["stop_fx"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "2115",}
+],"objName": "","cinemaIdx": 103,"typeId": 10024}
+,{"method": "rotateto","go": "Camera","time": 12.667,"easeType": 21,"customEase": [],"path": [{"x": 11.077,"y": 267.007,}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 12.667,"time": 0.417,"easeType": 21,"customEase": [],"path": [{"y": 10001.000,}
+],"objName": "SceneCamera",}
+]}

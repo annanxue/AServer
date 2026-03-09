@@ -1,0 +1,62 @@
+{"takeName": "Take1(1)","inits": [{"type": "position","go": "Camera","position": {"x": 354.810,"y": -1.595,"z": 324.554}
+,"objName": "SceneCamera",}
+,{"type": "position","go": "/trigger/chilun","position": {"x": 343.587,"y": -10.874,"z": 325.230}
+,"objName": "chilun",}
+,{"type": "rotation","go": "/trigger/chilun","rotation": {"y": 270.000,}
+,"objName": "chilun",}
+,{"type": "position","go": "Hero","position": {"x": 343.347,"y": -6.307,"z": 319.892}
+,"objName": "2005",}
+,{"type": "rotation","go": "Hero","rotation": {"y": 359.642,}
+,"objName": "2005",}
+,{"type": "rotation","go": "/SceneCamera","rotation": {"x": 17.568,"y": 269.745,"z": 359.994}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "Camera","time": 3.958,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 354.810,"y": -1.595,"z": 324.554}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.958,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"x": 354.810,"y": 2.944,"z": 324.554}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 5.958,"time": 0.542,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 354.810,"y": 2.944,"z": 324.554}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 6.500,"time": 1.375,"easeType": 21,"customEase": [],"path": [{"x": 354.810,"y": 2.944,"z": 332.758}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 7.875,"time": 1.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 354.810,"y": 2.944,"z": 332.758}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "/trigger/chilun","time": 1.917,"easeType": 21,"customEase": [],"path": [{"x": 343.587,"y": -6.719,"z": 325.230}
+],"objName": "chilun",}
+,{"method": "moveto","go": "/trigger/chilun","delay": 1.917,"time": 2.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 343.587,"y": -6.719,"z": 325.230}
+],"objName": "chilun",}
+,{"method": "moveto","go": "/trigger/chilun","delay": 3.958,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"x": 343.587,"y": -3.033,"z": 325.230}
+],"objName": "chilun",}
+,{"method": "moveto","go": "/trigger/chilun","delay": 5.958,"time": 2.958,"easeType": 21,"customEase": [],"path": [{"x": 343.587,"y": -3.033,"z": 325.230}
+],"objName": "chilun",}
+,{"method": "rotateto","go": "/trigger/chilun","time": 1.917,"easeType": 21,"customEase": [],"path": [{"y": 128.324,}
+],"objName": "chilun",}
+,{"method": "rotateto","go": "/trigger/chilun","delay": 1.917,"time": 2.042,"easeType": 21,"customEase": [],"path": [{"y": 128.324,}
+],"objName": "chilun",}
+,{"method": "rotateto","go": "/trigger/chilun","delay": 3.958,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"y": 333.787,}
+],"objName": "chilun",}
+,{"method": "rotateto","go": "/trigger/chilun","delay": 5.958,"time": 2.958,"easeType": 21,"customEase": [],"path": [{"y": 333.787,}
+],"objName": "chilun",}
+,{"method": "playanimation","go": "Hero","strings": ["guard"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 2.333,"strings": ["run_battle"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 3.417,"strings": ["guard"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 6.500,"strings": ["run_battle"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 7.875,"strings": ["guard"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "moveto","go": "Hero","time": 2.333,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 343.347,"y": -6.307,"z": 319.892}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 2.333,"time": 1.083,"easeType": 21,"customEase": [],"path": [{"x": 343.315,"y": -6.307,"z": 325.108}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 3.417,"time": 0.542,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 343.315,"y": -6.307,"z": 325.108}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 3.958,"time": 2.000,"easeType": 21,"customEase": [],"path": [{"x": 343.315,"y": -2.621,"z": 325.108}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 5.958,"time": 0.542,"easeType": 21,"customEase": [],"path": [{"x": 343.315,"y": -2.621,"z": 325.108}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 6.500,"time": 1.375,"easeType": 21,"customEase": [],"path": [{"x": 343.275,"y": -2.621,"z": 334.570}
+],"objName": "2005",}
+,{"method": "moveto","go": "Hero","delay": 7.875,"time": 1.042,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"x": 343.275,"y": -2.621,"z": 334.570}
+],"objName": "2005",}
+,{"method": "rotateto","go": "Hero","time": 8.917,"easeType": 32,"customEase": [0.000,1.000,0.000,0.000,1.000,1.000,0.000,0.000],"path": [{"y": 359.642,}
+],"objName": "2005",}
+,{"method": "rotateto","go": "/SceneCamera","time": 8.917,"easeType": 21,"customEase": [],"path": [{"x": 17.568,"y": 269.745,"z": 359.994}
+],"objName": "SceneCamera",}
+]}

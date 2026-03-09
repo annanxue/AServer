@@ -1,0 +1,29 @@
+{"takeName": "Take1(1)(2)","inits": [{"type": "position","go": "Camera","position": {"x": 34.843,"y": -30.116,"z": 30.925}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 4.048,"y": 281.963,"z": 0.306}
+,"objName": "SceneCamera",}
+,{"type": "position","go": "Hero","position": {"x": 31.090,"y": -33.138,"z": 31.729}
+,"objName": "2005",}
+,{"type": "rotation","go": "Hero","rotation": {"y": 285.351,}
+,"objName": "2005",}
+],"actions": [{"method": "moveto","go": "Camera","time": 4.125,"easeType": 21,"customEase": [],"path": [{"x": 34.843,"y": -30.116,"z": 30.925}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 4.125,"easeType": 21,"customEase": [],"path": [{"x": 4.048,"y": 281.963,"z": 0.306}
+],"objName": "SceneCamera",}
+,{"method": "playanimation","go": "Hero","strings": ["guard"],"floats": [2.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "playanimation","go": "Hero","delay": 4.125,"strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2005",}
+,{"method": "moveto","go": "Hero","time": 4.125,"easeType": 21,"customEase": [],"path": [{"x": 31.090,"y": -33.138,"z": 31.729}
+],"objName": "2005",}
+,{"method": "rotateto","go": "Hero","time": 4.125,"easeType": 21,"customEase": [],"path": [{"y": 285.351,}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 0.375,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u5478\uFF01",}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 1.000,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u522B\u5F97\u610F\uFF01\u6211\u8FD8\u4F1A\u7814\u5236\u51FA\u66F4\u591A\u7684\u4F5C\u54C1\uFF01",}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 2.500,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "\u54B1\u4EEC\u8D70\u7740\u77A7\uFF01",}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 3.708,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2005",}
+,{"method": "sendmessage","go": "Hero","delay": 4.125,"strings": ["say"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "",}
+],"objName": "2005",}
+]}

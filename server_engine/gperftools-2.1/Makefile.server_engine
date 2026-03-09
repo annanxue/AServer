@@ -1,0 +1,12 @@
+#########################################
+#                top dir                #
+#########################################
+PROJBASE=$(CURDIR)/../../
+
+#########################################
+#                target                 #
+#########################################
+all :
+	CFLAGS=-m32 CXXFLAGS=-m32 CPPFLAGS=-m32 ./configure --host=i686-linux --prefix=$(PROJBASE)/lib/gperftools
+	make
+	make install

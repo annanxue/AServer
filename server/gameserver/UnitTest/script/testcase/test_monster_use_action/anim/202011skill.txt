@@ -1,0 +1,48 @@
+﻿{"takeName": "Take1(1)","inits": [{"type": "position","go": "/2020","position": {"y": 0.383,}
+,"objName": "2020",}
+,{"type": "rotation","go": "/2020","rotation": {}
+,"objName": "2020",}
+,{"type": "position","go": "Camera","position": {"x": 1.446,"y": 3.097,"z": 4.441}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 18.255,"y": 198.948,"z": -0.002}
+,"objName": "SceneCamera",}
+,{"type": "position","go": "/2020_weapon_01","position": {}
+,"objName": "2020_weapon_01",}
+,{"type": "rotation","go": "/2020_weapon_01","rotation": {}
+,"objName": "2020_weapon_01",}
+,{"type": "position","go": "/200514","position": {"x": 0.167,"y": 3.668,"z": 2.203}
+,"objName": "200514",}
+],"actions": [{"method": "playanimation","go": "Hero","strings": ["skill_202011"],"floats": [1.000,0.200],"bools": [true],"objName": "2020",}
+,{"method": "playanimation","go": "Hero","delay": 1.200,"strings": ["guard"],"floats": [1.000,0.200],"bools": [true],"objName": "2020",}
+,{"method": "moveto","go": "/2020","time": 1.200,"easeType": 21,"customEase": [],"path": [{"y": 0.383,}
+,{"y": 0.383,}
+,{"y": 0.383,}
+],"objName": "2020",}
+,{"method": "rotateto","go": "/2020","time": 1.167,"easeType": 21,"customEase": [],"path": [{}
+],"objName": "2020",}
+,{"method": "rotateto","go": "/2020","delay": 1.167,"time": 0.033,"easeType": 21,"customEase": [],"path": [{}
+],"objName": "2020",}
+,{"method": "moveto","go": "Camera","time": 0.233,"easeType": 21,"customEase": [],"path": [{"x": 1.048,"y": 1.906,"z": 2.338}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.233,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 0.755,"y": 1.869,"z": 3.113}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.300,"time": 0.867,"easeType": 21,"customEase": [],"path": [{"x": 0.705,"y": 2.027,"z": 3.175}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.167,"time": 0.033,"easeType": 21,"customEase": [],"path": [{"x": 1.187,"y": 3.331,"z": 5.073}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 12.668,"y": 200.786,"z": 0.224}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.067,"time": 0.167,"easeType": 21,"customEase": [],"path": [{"x": 358.660,"y": 205.237,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.233,"time": 0.067,"easeType": 21,"customEase": [],"path": [{"x": 7.949,"y": 193.753,"z": 359.879}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.300,"time": 0.633,"easeType": 21,"customEase": [],"path": [{"x": 14.351,"y": 190.353,"z": 0.040}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.933,"time": 0.233,"easeType": 21,"customEase": [],"path": [{"x": 16.709,"y": 189.080,"z": 0.000}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.167,"time": 0.033,"easeType": 21,"customEase": [],"path": [{"x": 16.915,"y": 189.159,"z": -0.002}
+],"objName": "SceneCamera",}
+,{"method": "playanimation","go": "CreateMonster","strings": ["weapon_01"],"floats": [1.000,0.200],"bools": [true],"objName": "2020_weapon_01",}
+,{"method": "sendmessage","go": "Hero","delay": 1.100,"strings": ["color_correction"],"eventParams": [{"valueType": 9,"val_bool": false,"val_string": "70",}
+],"objName": "2020",}
+]}

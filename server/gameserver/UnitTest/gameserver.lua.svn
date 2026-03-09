@@ -1,0 +1,125 @@
+AppConfig = 
+{
+    Daemon = 1,         --是否(1/0)后台模式启动
+    TimerSize = 1024,   --Timer预生成的内存块大小
+
+    Resource = "./resource",
+
+    HttpTaskNum = 4,
+
+    --配置日志路径和等级
+    Log =
+    {
+        LogPathPrefix = "./log/game",
+        ErrLevel = 4,
+        LogLevel = 2,
+        TraceLevel = 2,
+        ProfLevel = 2,
+    },
+ 
+    --配置lua脚本目录和入口
+    Lua = 
+    {
+        Path = "./script/",         --Lua文件所在位置
+        MainFile = "main.lua",      
+    },
+
+    LogicFrameRate = 10,            -- 逻辑线程帧率 
+
+    AllowShopsOnBF = 0,             -- 是否允许商店跨服
+    AllowWildCrossZone = 0,         -- 允许野外PK跨区
+
+    --配置gameserver
+    GameSvr =
+    {
+        MaxCon = 4096,              -- max socket = 4096<<2
+        IP = "192.168.15.9",           -- 监听的IP
+        Port = 9119,               -- 监听端口
+        Crypt = 1,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        ProcThreadNum = 4,          -- 多线程读写设置
+        ServerId = 0,
+        TimeOutTime = 25,
+    },
+
+    --配置dbclient，对应dbserver.lua中的DbSvr配置
+    DBClient =
+    {
+        IP = "127.0.0.1",           -- DbSvr的IP
+        Port = 9118,               -- DbSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 1000,           -- 和dbserver断开连接后的重连间隔
+    },
+
+    LoginClient =
+    {
+        IP = "127.0.0.1",           -- LoginSvr的IP
+        Port = 9117,                -- LoginSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 1000,           -- 和login server断开连接后的重连间隔
+    },
+
+    GMClient =
+    {
+        IP = "123.59.41.92",         -- GMSvr的IP
+        Port = 9120,                -- GMSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 1000,        -- 和gm server断开连接后的重连间隔
+    },
+
+    BFClient =
+    {
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 1000,           -- 和bf server断开连接后的重连间隔
+        BFList = 
+        {
+            { IP = "192.168.15.9", Port = 11123 },
+            { IP = "192.168.15.9", Port = 11124 },
+        }
+    },
+
+    GmSvr =
+    {
+        MaxCon = 8192,              -- max socket = 4096<<2
+        Port = 9124,               -- 监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        ProcThreadNum = 1,          -- 处理读写多线程设置
+        TimeOutTime = 25,
+    },
+
+
+    LogClient =
+    {
+        IP = "127.0.0.1",           -- LogSvr的IP
+        Port = 9121,                -- LogSvr的监听端口
+        Crypt = 0,                  -- 是否加密
+        PollWaitTime = 100,         -- epoll wait time
+        SleepTime = 1000,           -- 和log server断开连接后的重连间隔
+        CertifyCode = "b99fef3a96e2f9837f6be7366f34e4f4fd2bbc9b",     -- 验证码
+    },
+
+    --游戏服列表及分区列表
+    GameSvrConfigUrl = "http://120.25.106.247:3000/GameListOverSea/",
+	
+	-- 无论国内还是国外都固定为cn
+    GameArea = "cn",
+	
+	--1：国内； 0或者不配置：国外
+	-- IsChina = 1,
+
+    OrderQueryUrl = "https://sdk.xt.tw.me-svc.com/Verify/pay",
+    OrderAckUrl = "https://sdk.xt.tw.me-svc.com/Verify/consume",
+    OrderCompensateUrl = "https://sdk.xt.tw.me-svc.com/Verify/unreach_order",
+
+    PlatformTag = "GamePlatformTag",
+
+    MIPushTag = "39",
+
+    GameID = "12345",
+}
+

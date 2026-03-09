@@ -1,0 +1,29 @@
+﻿{"takeName": "Take1(1)","inits": [{"type": "position","go": "Camera","position": {"x": 111.000,"y": 3.910,"z": 89.460}
+,"objName": "SceneCamera",}
+,{"type": "rotation","go": "Camera","rotation": {"x": 14.921,"y": 237.082,"z": 7.445}
+,"objName": "SceneCamera",}
+],"actions": [{"method": "moveto","go": "Camera","time": 0.967,"easeType": 21,"customEase": [],"path": [{"x": 111.060,"y": 3.570,"z": 89.560}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 0.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 111.000,"y": 3.910,"z": 89.460}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 1.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 111.060,"y": 3.570,"z": 89.560}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 2.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 111.000,"y": 3.910,"z": 89.460}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 3.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 111.060,"y": 3.570,"z": 89.560}
+],"objName": "SceneCamera",}
+,{"method": "moveto","go": "Camera","delay": 4.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 111.000,"y": 3.910,"z": 89.460}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","time": 0.967,"easeType": 21,"customEase": [],"path": [{"x": 14.921,"y": 237.082,"z": 7.445}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 0.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 14.921,"y": 237.082,"z": 7.445}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 1.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 14.921,"y": 237.082,"z": 7.445}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 2.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 14.921,"y": 237.082,"z": 7.445}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 3.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 14.921,"y": 237.082,"z": 7.445}
+],"objName": "SceneCamera",}
+,{"method": "rotateto","go": "Camera","delay": 4.967,"time": 1.000,"easeType": 21,"customEase": [],"path": [{"x": 14.921,"y": 237.082,"z": 7.445}
+],"objName": "SceneCamera",}
+]}
