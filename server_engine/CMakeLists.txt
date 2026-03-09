@@ -52,9 +52,14 @@ target_include_directories(common PRIVATE
     ${PROJBASE}/sceneobj/sceneobj_utils
     ${PROJBASE}/sceneobj/action
     ${PROJBASE}/sceneobj/ai
-    /usr/include/mysql
-    /usr/include/mariadb
 )
+
+# vcpkg 包头文件路径
+if(DEFINED VCPKG_INSTALLED_DIR)
+    target_include_directories(common PRIVATE 
+        ${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/include
+    )
+endif()
 
 # 遍历所有子目录，添加源文件
 foreach(SUBDIR ${SUBDIRS})

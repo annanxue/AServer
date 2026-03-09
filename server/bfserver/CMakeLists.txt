@@ -26,20 +26,24 @@ set(SOURCES
     log_client_module.cpp
     gm_client_module.cpp
     bf_lua_module.cpp
+    UnitTest/bf_app.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME}
     ${PROJBASE}/lib/libsceneobj.a
+    ${PROJBASE}/lib/libcommon_release.a
+    ${PROJBASE}/lib/libffluajit.a
     ${PROJBASE}/lib/libtcmalloc.a
     ${PROJBASE}/lib/libprofiler.a
-    ${PROJBASE}/lib/libcurl.a
-    ${PROJBASE}/lib/libssl.a
-    ${PROJBASE}/lib/libcrypto.a
-    ${PROJBASE}/lib/libz.a
-    ${PROJBASE}/lib/libcares.a
-    pthread
+    CURL::libcurl
+    OpenSSL::SSL
+    OpenSSL::Crypto
+    ZLIB::ZLIB
+    zstd::libzstd_static
+    c-ares::cares
+    Threads::Threads
     dl
     rt
 )

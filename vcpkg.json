@@ -1,0 +1,13 @@
+{
+  "name": "aserver",
+  "version": "1.0.0",
+  "description": "AServer Game Server Project",
+  "dependencies": [
+    "curl",
+    "openssl",
+    "zlib",
+    "c-ares",
+    "libmysql",
+    "zstd"
+  ]
+}

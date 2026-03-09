@@ -5,6 +5,8 @@ Debug/
 RelWithDebInfo/
 MinSizeRel/
 
+vcpkg_installed/
+
 # Visual Studio
 .vs/
 *.sln
