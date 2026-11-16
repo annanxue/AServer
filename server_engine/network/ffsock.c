@@ -10,12 +10,12 @@ int ff_netstart(int v)
 	struct WSAData wsa;
 	WSAStartup((unsigned short)v, &wsa);	
 	
-	/*!< ÕâÀï½¨Òé×îºÃ»¹ÊÇÅÐ¶ÏÒ»ÏÂWSAStartupµÄ·µ»ØÖµ£¬²»¹ýÒª×¢ÒâÁ½µã£º
-	1.²»ÒªÊ¹ÓÃWSAGetLastError,ÒòÎªÔÚÊ§°ÜµÄÇé¿öÏÂ£¬WS2_32.DLL¸ù±¾¾ÍÃ»ÓÐ¼ÓÔØ½øÀ´£¬ÕâÊ±
-	client data area»¹Î´Ôø½¨Á¢£¬¶ølast error informationÊÇ´æ·ÅÓÚ´ËµÄ¡£
-	2.Èç¹ûÏëÀûÓÃwsaµÄvVersionÊôÐÔÀ´ÅÐ¶ÏDLLµÄ°æ±¾ÄÇ¾ÍÒª×¢Òâ£ºÈç¹ûDLL½öÖ§³Öv(±ÈÈç£º2.2)
-	ÒÔÉÏµÄ°æ±¾ºÅ£¨²»°üÀ¨v£©£¬ÕâÊ±ËäÈ»DLL¼ÓÔØÊ§°Ü£¬µ«vVersion·µ»ØµÄÖµÈ´Îªv£¬ËùÒÔÏëÓÃËü
-	À´×öÅÐ¶Ï¾Í»áÊ§Õæ¡£
+	/*!< è¿™é‡Œå»ºè®®æœ€å¥½è¿˜æ˜¯åˆ¤æ–­ä¸€ä¸‹WSAStartupçš„è¿”å›žå€¼ï¼Œä¸è¿‡è¦æ³¨æ„ä¸¤ç‚¹ï¼š
+	1.ä¸è¦ä½¿ç”¨WSAGetLastError,å› ä¸ºåœ¨å¤±è´¥çš„æƒ…å†µä¸‹ï¼ŒWS2_32.DLLæ ¹æœ¬å°±æ²¡æœ‰åŠ è½½è¿›æ¥ï¼Œè¿™æ—¶
+	client data areaè¿˜æœªæ›¾å»ºç«‹ï¼Œè€Œlast error informationæ˜¯å­˜æ”¾äºŽæ­¤çš„ã€‚
+	2.å¦‚æžœæƒ³åˆ©ç”¨wsaçš„vVersionå±žæ€§æ¥åˆ¤æ–­DLLçš„ç‰ˆæœ¬é‚£å°±è¦æ³¨æ„ï¼šå¦‚æžœDLLä»…æ”¯æŒv(æ¯”å¦‚ï¼š2.2)
+	ä»¥ä¸Šçš„ç‰ˆæœ¬å·ï¼ˆä¸åŒ…æ‹¬vï¼‰ï¼Œè¿™æ—¶è™½ç„¶DLLåŠ è½½å¤±è´¥ï¼Œä½†vVersionè¿”å›žçš„å€¼å´ä¸ºvï¼Œæ‰€ä»¥æƒ³ç”¨å®ƒ
+	æ¥åšåˆ¤æ–­å°±ä¼šå¤±çœŸã€‚
 	*/
 #endif
 	return 0;
@@ -37,7 +37,7 @@ int ff_socket(int family, int type, int protocol)
 int ff_close(int sock)
 {
 	if (sock < 0) return 0;
-#ifdef __linux
+#ifdef ASERVER_POSIX
 	close(sock);
 #else
 	closesocket(sock);
@@ -75,7 +75,7 @@ int ff_accept(int sock, struct sockaddr *addr)
 
 int ff_errno(void)
 {
-#ifdef __linux
+#ifdef ASERVER_POSIX
 	return errno;
 #else
 	return WSAGetLastError();
@@ -106,7 +106,7 @@ int ff_recvfrom(int sock, void *buf, long size, int mode, struct sockaddr *addr)
 
 int ff_ioctl(int sock, long cmd, unsigned long *argp)
 {
-#ifdef __linux
+#ifdef ASERVER_POSIX
 	return ioctl(sock, cmd, argp);
 #else
 	return ioctlsocket(sock, cmd, argp);

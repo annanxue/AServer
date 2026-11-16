@@ -24,9 +24,7 @@ public:
 	int GetPort() const;
 	const char* GetString() const;
 	void GetStringIP( char* buf ) const;
-#ifdef __linux
 	in_addr_t GetIP() const { return ((struct sockaddr_in*)&end_point_)->sin_addr.s_addr; }
-#endif
 	operator struct sockaddr_in*() { return (struct sockaddr_in*)&end_point_; }
 	operator sockaddr* () { return &end_point_; }
 	operator const sockaddr* () const { return &end_point_; }

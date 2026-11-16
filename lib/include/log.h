@@ -3,15 +3,25 @@
 
 #include <string.h>
 #include <stdio.h>
-#include <pthread.h>
 #include <stdarg.h>
-#include <syslog.h>
+#include "ffsys.h"
 #include "event.h"
 #include "thread.h"
 #include "define.h"
 #include "misc.h"
 #include "autolock.h"
 #include "singleton.h"
+
+#ifndef ASERVER_WINDOWS
+#include <syslog.h>
+#else
+/* Windows 没有 syslog，保留接口以兼容调用点 */
+#define LOG_CONS 0
+#define LOG_LOCAL0 0
+#define openlog(...) ((void)0)
+#define closelog() ((void)0)
+#define syslog(...) ((void)0)
+#endif
 
 #define LOG_TYPE_ERROR         0
 #define LOG_TYPE_LOG           1

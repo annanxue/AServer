@@ -8,9 +8,7 @@
 #include "netmng.h"
 #include "clientsocket.h"
 #include "msg.h"
-#ifdef __linux
 #include "serversocket.h"
-#endif
 
 #include "lunar.h"
 
@@ -36,13 +34,9 @@ void SockProcThread::run()
             memcpy( &events, buf->head_, sizeof(int) );
             memcpy( &dpid, buf->head_+sizeof(int), sizeof(DPID) );
             buf->head_ += block_sz;
-#ifdef __linux
             parent_->multi_client_lock( true );
-#endif
             CommonSocket * csock = parent_->get_sock(dpid);
-#ifdef __linux
             parent_->multi_client_lock( false );
-#endif
             if ( !csock )
             {
                 ERR(2)("[NET](SockPorcThread) common sock dpid: %d null", dpid);
@@ -293,15 +287,11 @@ void NetMng::mark_snapshot_stats( packet_type_t _packet_type, int _data_size )
 
 CommonSocket * NetMng::get_sock_fd(int fd) const
 {
-#ifdef _WIN32
-	return socket_list_[0];
-#else
 	if ( ( fd < 0 ) || ( fd >= MAX_USER) )
 	{
-		return NULL;	
+		return NULL;
 	}
 	return socket_list_[fd];
-#endif
 }
 
 CommonSocket * NetMng::get_sock(DPID dpid) const
@@ -316,11 +306,7 @@ CommonSocket * NetMng::get_sock(DPID dpid) const
 
 int NetMng::add_sock(CommonSocket * sock, bool time_out)
 {
-#ifdef _WIN32
-	int fd = 0;
-#else
 	int fd = sock->get_dpid() & 0x0000FFFF;
-#endif
 	
 	if ( ( fd < 0 ) || ( fd >= MAX_USER ) )
 	{
@@ -490,29 +476,22 @@ int NetMng::init_connection(int port, const char * addr)
 	return 0;
 }
 
-#ifdef __linux
-
-/*! 一般服务器所要求的可连接数量都会大于一般linux系统所设置的最大打开文件数,
-	所以如果是服务器端启动监听端口,则需要检测并设置最大打开文件数 */
+#ifdef ASERVER_POSIX
 int set_nofile(u_long nofile)
 {
 	struct rlimit rlim_nofile;
-
-	if ( getrlimit(RLIMIT_NOFILE, &rlim_nofile) < 0 )
+	if (getrlimit(RLIMIT_NOFILE, &rlim_nofile) < 0) return -1;
+	if (rlim_nofile.rlim_cur < nofile)
 	{
-		return -1;
-	}
-
-	if ( rlim_nofile.rlim_cur < nofile )
-	{
-		rlim_nofile.rlim_cur = nofile;	/* Soft limit */
-		rlim_nofile.rlim_max = nofile;	/* Hard limit (ceiling
-	                                      for rlim_cur) */
+		rlim_nofile.rlim_cur = nofile;
+		rlim_nofile.rlim_max = nofile;
 		return setrlimit(RLIMIT_NOFILE, &rlim_nofile);
 	}
-
 	return 0;
 }
+#else
+int set_nofile(u_long nofile) { (void)nofile; return 0; }
+#endif
 
 int NetMng::start_server( int max_con, int port, bool crypt, const char* ip, int timeval, int pthread_num )
 {
@@ -568,7 +547,7 @@ int NetMng::start_server( int max_con, int port, bool crypt, const char* ip, int
 		return -1;
 	}
 
-	sleep( 3 );
+	ff_sleep( 3000 );
 
 	LOG(2)("[NET](netmng) NetMng::start_server(), set_nofile, max_fd: %d", max_fd_);
 	started_ = true;
@@ -597,8 +576,6 @@ int NetMng::create_session()
 	this->add_sock( svr_socket_, false );
 	return 0;
 }
-
-#endif
 
 
 int NetMng::connect_server(const char * addr, int port, bool crypt, int timeval)
@@ -637,8 +614,6 @@ int NetMng::connect_server(const char * addr, int port, bool crypt, int timeval)
 #endif
 	return 0;
 }
-
-#ifdef __linux
 
 int NetMng::init_multi_client( int _max_con, int _timeval )
 {
@@ -721,8 +696,6 @@ void NetMng::multi_client_lock( bool _lock )
     else
         multi_client_mutex_.Unlock();
 }
-
-#endif // _linux
 
 int NetMng::join_session()
 {
@@ -964,18 +937,16 @@ int NetMng::post_connect_msg(CommonSocket * csock)
 
 int initial_startup()
 {
-    int signature = luaF_getopcode_signature();
-    apply_signature( signature );
+    /* vcpkg LuaJIT 不含 vendored 版本自定义的 opcode 签名接口 */
+    apply_signature( 0 );
     return 0;
 }
 
 void final_cleanup()
 {
-#ifndef __linux
-	unref_encode_func();
-#endif
 }
 
+#ifdef ASERVER_POSIX
 #include <net/if.h>
 char* NetMng::get_ip()
 {
@@ -984,12 +955,9 @@ char* NetMng::get_ip()
 
     int sock;
     struct sockaddr_in sin;
-    //struct sockaddr sa;
     struct ifreq ifr;
-    //unsigned char mac[6];
 
     sock = ff_socket(AF_INET, SOCK_DGRAM, 0);
-
     if (sock == -1) {
         perror("Error: get local IP socket fail!");
         return NULL;
@@ -1000,15 +968,34 @@ char* NetMng::get_ip()
 
     if (ioctl(sock, SIOCGIFADDR, &ifr) < 0) {
         perror("Error: get local IP ioctl fail!");
+        ff_close(sock);
         return NULL;
     }
 
     memcpy(&sin, &ifr.ifr_addr, sizeof(sin));
     sprintf( ip_, "%s",inet_ntoa(sin.sin_addr));
-
     ff_close( sock );
-
     return ip_;
 }
+#else
+char* NetMng::get_ip()
+{
+    if (ip_[0] != '\0') return ip_;
+    char host[256] = { 0 };
+    if (gethostname(host, sizeof(host)) == 0)
+    {
+        struct hostent* he = gethostbyname(host);
+        if (he && he->h_addr_list && he->h_addr_list[0])
+        {
+            struct in_addr addr;
+            memcpy(&addr, he->h_addr_list[0], sizeof(addr));
+            ff_snprintf(ip_, sizeof(ip_), "%s", inet_ntoa(addr));
+            return ip_;
+        }
+    }
+    ff_snprintf(ip_, sizeof(ip_), "127.0.0.1");
+    return ip_;
+}
+#endif
 
 } //namespace FF_Network

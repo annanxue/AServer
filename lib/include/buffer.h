@@ -1,10 +1,11 @@
 #ifndef __BUFFER_H__
 #define	__BUFFER_H__
 
-#ifdef __linux
+#include "ffsys.h"
+#ifdef ASERVER_POSIX
 #include <netinet/in.h>
-#elif defined(_WIN32)
-#include <winsock.h>
+#elif defined(ASERVER_WINDOWS)
+#include "ffsock.h"
 #endif
 #include "autolock.h"
 //#include "buddy.h"

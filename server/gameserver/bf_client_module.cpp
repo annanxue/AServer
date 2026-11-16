@@ -155,7 +155,7 @@ int BFClient::choose_bfid_random()
         return -1;
     }
 
-    int start_bf_id = random() % bf_num_;
+    int start_bf_id = rand() % bf_num_;
     for( int i = 0; i < bf_num_; i++ ) 
     {
         int bf_id = (i + start_bf_id) % bf_num_;

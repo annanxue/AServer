@@ -1,9 +1,6 @@
 /*
  * FlowRate is used to control data flow rate.
- * 
  */
-
-#ifdef __linux
 
 #ifndef __FLOW_RATE_H__
 #define __FLOW_RATE_H__
@@ -28,7 +25,7 @@ public:
 	bool get_over_flow();
 	bool is_over_flow_with_frame( int bytes );
 	bool is_over_flow( int bytes );
-	
+
 private:
 	u_long start_frm_;
 	int current_bytes_;
@@ -37,6 +34,4 @@ private:
 
 }
 
-#endif
-
-#endif //__linux
+#endif /* __FLOW_RATE_H__ */

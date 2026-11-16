@@ -2,7 +2,9 @@
 #include "app_base.h"
 #include "misc.h"
 #include "log.h"
+#ifdef ASERVER_ENABLE_TCMALLOC
 #include "gperftools/malloc_extension.h"
+#endif
 #include "netmng.h"
 
 extern int g_frame;
@@ -35,14 +37,18 @@ void LogicThread::do_log_frame( NetMng* _net_mng, lua_State* _L )
 {
     if( g_frame % ( frame_rate_ * 60 ) == 0 )
     {
-        char tc_stat[TC_STAT_LOG_LEN];
+        char tc_stat[TC_STAT_LOG_LEN] = { 0 };
+#ifdef ASERVER_ENABLE_TCMALLOC
         MallocExtension::instance()->GetStats( tc_stat, TC_STAT_LOG_LEN );
+#endif
         PROF(2)( "%s", tc_stat );
 
         _net_mng->print_packet_stats();
 
-        size_t tc_memory = 0; 
+        size_t tc_memory = 0;
+#ifdef ASERVER_ENABLE_TCMALLOC
         MallocExtension::instance()->GetNumericProperty( "generic.current_allocated_bytes", &tc_memory );
+#endif
 
         int virtual_memory = get_mm();
         int lua_memory = lua_gc( _L, LUA_GCCOUNT, 0 );

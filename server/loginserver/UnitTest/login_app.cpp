@@ -1,4 +1,6 @@
-#include <sys/ioctl.h> 
+#ifndef _WIN32
+#include <sys/ioctl.h>
+#endif 
 #include <string.h>
 #include "netmng.h"
 #include "buffer.h"

@@ -37,12 +37,12 @@ private:
     Singleton(){};
     ~Singleton(){};
 
-    static std::auto_ptr<DataType> data_holder_;
+    static std::unique_ptr<DataType> data_holder_;
     static Mutex data_mutex_;
 };
 
 template<typename DataType, int _instance_id>
-std::auto_ptr<DataType> Singleton<DataType, _instance_id>::data_holder_;
+std::unique_ptr<DataType> Singleton<DataType, _instance_id>::data_holder_;
 
 template<typename DataType, int _instance_id>
 Mutex Singleton<DataType, _instance_id>::data_mutex_;
@@ -86,12 +86,12 @@ private:
     InitDataSingleton(){};
     ~InitDataSingleton(){};
 
-    static std::auto_ptr<DataType> data_holder_;
+    static std::unique_ptr<DataType> data_holder_;
     static Mutex data_mutex_;
 };
 
 template<typename DataType, int _instance_id>
-std::auto_ptr<DataType> InitDataSingleton<DataType, _instance_id>::data_holder_;
+std::unique_ptr<DataType> InitDataSingleton<DataType, _instance_id>::data_holder_;
 
 template<typename DataType, int _instance_id>
 Mutex InitDataSingleton<DataType, _instance_id>::data_mutex_;

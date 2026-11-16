@@ -1,5 +1,3 @@
-#ifdef __linux
-
 #include "flow_rate.h"
 
 namespace FF_Network {
@@ -60,5 +58,3 @@ bool FlowRate::is_over_flow( int bytes )
 }
 
 }
-
-#endif //__linux

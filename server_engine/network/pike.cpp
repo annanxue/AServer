@@ -1,5 +1,3 @@
-#ifdef __linux
-
 #include "pike.h"
 
 const int DEFAULT_GENIUS_NUMBER = 0x05027919;
@@ -154,4 +152,3 @@ void ctx_encode(ff_ctx &ctx, void *buffer, int len)
 	} while (len>0);		
 }
 
-#endif //__linux

@@ -10,13 +10,9 @@
 #include "misc.h"
 
 #ifdef _WIN32
-#define MAX_USER		1
+#define MAX_USER		4096
 #else
 #define MAX_USER		32768
-#endif
-
-#ifndef __linux
-#include "pike_lua.h"
 #endif
 
 #define NEW_RECV_LIST
@@ -46,11 +42,8 @@ public:
 	int				init();
 	int				destroy();
 
-	/*!< 非linux系统下无法启动为服务端*/
-#ifdef __linux
 	int             start_server(int max_con, int port, bool crypt = true,const char* ip = NULL, int timeval = 100, int pthread_num = 1);
 	int				create_session();	/* 启动端口监听 */
-#endif
 
 	int				connect_server(const char * addr, int port, bool crypt = true, int timeval = 100);
 	int				stop_server();
@@ -58,12 +51,9 @@ public:
 	int				init_connection(int port, const char * addr = NULL);	/* 初始化服务器地址*/
 	
 	int				join_session();		/* 连接目标服务器 */
-#ifdef __linux
-    // 非linux系统不能使用多客户端模式
     int             init_multi_client( int _max_con, int _timeval = 100 );
     ClientSocket*   connect_server_new( const char* _ip, int _port, bool _crypt = true );
     void            multi_client_lock( bool _lock );
-#endif
        				
 	int				get_timeval() const { return timeval_; }
 	void			set_timeout(int timeout) { timeout_ = timeout; } /* 设置超时时间限制*/
@@ -165,9 +155,7 @@ private:
     list_head       recv_list_;
     list_head       proc_list_;
     Mutex           recv_lock_;
-#ifdef __linux
     Mutex           multi_client_mutex_;
-#endif 
     int             server_id_;
 private:
     Mutex           buff_stats_mutex_;

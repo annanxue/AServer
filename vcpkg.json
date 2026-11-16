@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "AServer Game Server Project",
   "dependencies": [
+    "c-ares",
     "curl",
+    "libmysql",
+    "luajit",
     "openssl",
     "zlib",
-    "c-ares",
-    "libmysql",
     "zstd"
-  ]
+  ],
+  "builtin-baseline": "8f363bdc11359ede4bc51e5eb32a2617538049c8"
 }

@@ -6,8 +6,8 @@
 #ifndef _LJ_DEF_H
 #define _LJ_DEF_H
 
-#ifdef _MSC_VER
-/* MSVC is stuck in the last century and doesn't have C99's stdint.h. */
+#if defined(_MSC_VER) && _MSC_VER < 1600
+/* 老版本 MSVC 没有 stdint.h */
 typedef __int8 int8_t;
 typedef __int16 int16_t;
 typedef __int32 int32_t;
@@ -203,12 +203,12 @@ static LJ_AINLINE uint64_t lj_bswap64(uint64_t x)
 
 static LJ_AINLINE uint32_t lj_ffs(uint32_t x)
 {
-  uint32_t r; _BitScanForward(&r, x); return r;
+  unsigned long r; _BitScanForward(&r, x); return (uint32_t)r;
 }
 
 static LJ_AINLINE uint32_t lj_fls(uint32_t x)
 {
-  uint32_t r; _BitScanReverse(&r, x); return r;
+  unsigned long r; _BitScanReverse(&r, x); return (uint32_t)r;
 }
 
 #define lj_bswap(x)	(_byteswap_ulong((x)))

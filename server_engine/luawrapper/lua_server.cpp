@@ -9,7 +9,12 @@ const int32_t LUA_GC_MIN_STEP = 10;
 static LuaServer* g_luasvr = NULL;
 
 typedef void (*lua_large_table_warn_func)( lua_State *L, char* fmt, ... );
-extern lua_large_table_warn_func g_lua_large_table_warn;
+lua_large_table_warn_func g_lua_large_table_warn = NULL;
+
+extern "C" {
+    int luaopen_cjson(lua_State* L);
+    int luaopen_cmsgpack(lua_State* L);
+}
 
 #ifdef DEBUG
 GScriptDebug* g_ldb = NULL;
@@ -200,6 +205,9 @@ bool LuaServer::start_server( const char* _luadir, const char* _main_file )
     L_ = lua_open();
 
     luaL_openlibs( L_ );
+    /* vcpkg LuaJIT 不含原内置模块，显式注册以保持脚本兼容 */
+    luaopen_cjson( L_ );
+    luaopen_cmsgpack( L_ );
     lua_atpanic( L_, my_lua_panic );
 
 #ifdef DEBUG

@@ -1,5 +1,7 @@
 #include <signal.h>
+#ifndef _WIN32
 #include <sys/ioctl.h>
+#endif
 #include <stdint.h>
 #include "log.h"
 #include "misc.h"

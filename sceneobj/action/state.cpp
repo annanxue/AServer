@@ -4,6 +4,17 @@
 #include <string.h>
 #include <stdint.h>
 
+#ifdef _MSC_VER
+#include <intrin.h>
+static inline int aserver_ctz(unsigned int x)
+{
+    unsigned long r = 0;
+    _BitScanForward(&r, x);
+    return (int)r;
+}
+#define __builtin_ctz(x) aserver_ctz((unsigned int)(x))
+#endif
+
 #include "state.h"
 #include "player_mng.h"
 #include "timer.h"
@@ -139,7 +150,7 @@ static inline int find_next_set_bit2(unsigned int *addr, unsigned int size, int 
 		unsigned int shift(offset >> 5);
 		ptr += shift;
 		//align_offset = shift << 5;
-		//µ¥Î»offset
+		//å•ä½offset
 		unsigned int mask(ptr[0]);
 		mask &= (0xffffffff << (offset & 31));
 		if(mask)

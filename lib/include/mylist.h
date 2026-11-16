@@ -1,6 +1,11 @@
 #ifndef __MYLIST_H__
 #define __MYLIST_H__
 
+#ifdef _MSC_VER
+#ifndef __inline__
+#define __inline__ inline
+#endif
+#endif
 
 struct list_head {
         struct list_head *next, *prev;

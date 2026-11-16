@@ -1,5 +1,3 @@
-#ifdef __linux
-
 #ifndef _FFCTX_H_
 #define _FFCTX_H_
 
@@ -12,10 +10,9 @@ typedef struct {
 	int dis1;
 	int dis2;
 	int index;
-	int carry;  
+	int carry;
 	unsigned long buffer[64];
 } ff_addikey;
-
 
 typedef struct {
 	unsigned long sd;
@@ -24,15 +21,13 @@ typedef struct {
 	unsigned char buffer[0x1000];
 } ff_ctx;
 
-
 void ctx_init(unsigned long sd, ff_ctx &ctx);
 void ctx_encode(ff_ctx &ctx, void *buffer, int len);
+void ctx_encode_recv(ff_ctx &ctx, void *buffer, int len);
 void apply_signature(int signature);
 
-#ifdef __cplusplus                                                            
-}                                                                             
-#endif    
-
+#ifdef __cplusplus
+}
 #endif
 
-#endif //__linux
+#endif /* _FFCTX_H_ */

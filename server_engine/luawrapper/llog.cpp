@@ -8,10 +8,12 @@
 #include "netmng.h"
 #include "serialnumber.h"
 #include "des.h"
+#ifdef ASERVER_ENABLE_TCMALLOC
 #include "gperftools/profiler.h"
+#endif
 #include "md5.h"
 
-extern uint32_t g_frame;
+extern int g_frame;
 const char* CYPHER_KEY = "hahaha";
 
 #include "lua_debugger.h"
@@ -543,15 +545,21 @@ int c_prof_start( lua_State* _L )
 {
     lcheck_argc( _L, 1 ); 
     const char* file_name = lua_tostring( _L, 1 );
+#ifdef ASERVER_ENABLE_TCMALLOC
     ProfilerStart( file_name );
+#else
+    (void)file_name;
+#endif
     TRACE(2)( "[PROF]prof c start. file name: %s", file_name );
     return 0;
 }
 
 int c_prof_stop( lua_State* _L )
 {
-    lcheck_argc( _L, 0 ); 
+    lcheck_argc( _L, 0 );
+#ifdef ASERVER_ENABLE_TCMALLOC
     ProfilerStop();
+#endif
     TRACE(2)( "[PROF]prof c stop." );
     return 0;
 }
@@ -655,28 +663,17 @@ int c_backup( lua_State* _L )
 
 int c_get_miniserver_time_span( lua_State* _L )
 {
-    lcheck_argc( _L, 0 ); 
-
-    struct timezone tz;
-	struct timeval tv;
-	gettimeofday(&tv,&tz);
-  
-    unsigned int span = tv.tv_sec;
-    lua_pushinteger( _L, span );
-
+    lcheck_argc( _L, 0 );
+    long sec = 0, usec = 0;
+    ff_timeofday(&sec, &usec);
+    lua_pushinteger( _L, (lua_Integer)sec );
     return 1;
 }
 
 int c_get_unity_time_span( lua_State* _L )
 {
-    lcheck_argc( _L, 0 ); 
-
-    struct timespec tv;
-    clock_gettime(CLOCK_REALTIME, &tv);
-  
-    unsigned int span = tv.tv_sec;
-    lua_pushinteger( _L, span );
-
+    lcheck_argc( _L, 0 );
+    lua_pushinteger( _L, (lua_Integer)time(NULL) );
     return 1;
 }
 

@@ -1,0 +1,145 @@
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe
+The following packages are already installed:
+  * boost-algorithm:x64-windows@1.92.0
+  * boost-align:x64-windows@1.92.0
+  * boost-any:x64-windows@1.92.0
+  * boost-array:x64-windows@1.92.0
+  * boost-assert:x64-windows@1.92.0
+  * boost-atomic:x64-windows@1.92.0
+  * boost-bimap:x64-windows@1.92.0
+  * boost-bind:x64-windows@1.92.0
+  * boost-chrono:x64-windows@1.92.0
+  * boost-cmake:x64-windows@1.92.0
+  * boost-compat:x64-windows@1.92.0
+  * boost-concept-check:x64-windows@1.92.0
+  * boost-config:x64-windows@1.92.0
+  * boost-container:x64-windows@1.92.0
+  * boost-container-hash:x64-windows@1.92.0
+  * boost-conversion:x64-windows@1.92.0
+  * boost-core:x64-windows@1.92.0
+  * boost-crc:x64-windows@1.92.0
+  * boost-date-time:x64-windows@1.92.0
+  * boost-describe:x64-windows@1.92.0
+  * boost-detail:x64-windows@1.92.0
+  * boost-dynamic-bitset:x64-windows@1.92.0
+  * boost-endian:x64-windows@1.92.0
+  * boost-exception:x64-windows@1.92.0
+  * boost-foreach:x64-windows@1.92.0
+  * boost-function:x64-windows@1.92.0
+  * boost-function-types:x64-windows@1.92.0
+  * boost-functional:x64-windows@1.92.0
+  * boost-fusion:x64-windows@1.92.0
+  * boost-geometry:x64-windows@1.92.0
+  * boost-graph:x64-windows@1.92.0
+  * boost-headers:x64-windows@1.92.0
+  * boost-integer:x64-windows@1.92.0
+  * boost-intrusive:x64-windows@1.92.0
+  * boost-io:x64-windows@1.92.0
+  * boost-iterator:x64-windows@1.92.0
+  * boost-lambda:x64-windows@1.92.0
+  * boost-lexical-cast:x64-windows@1.92.0
+  * boost-math:x64-windows@1.92.0
+  * boost-move:x64-windows@1.92.0
+  * boost-mp11:x64-windows@1.92.0
+  * boost-mpl:x64-windows@1.92.0
+  * boost-multi-index:x64-windows@1.92.0
+  * boost-multiprecision:x64-windows@1.92.0
+  * boost-numeric-conversion:x64-windows@1.92.0
+  * boost-optional:x64-windows@1.92.0
+  * boost-parameter:x64-windows@1.92.0
+  * boost-phoenix:x64-windows@1.92.0
+  * boost-polygon:x64-windows@1.92.0
+  * boost-pool:x64-windows@1.92.0
+  * boost-predef:x64-windows@1.92.0
+  * boost-preprocessor:x64-windows@1.92.0
+  * boost-program-options:x64-windows@1.92.0
+  * boost-property-map:x64-windows@1.92.0
+  * boost-property-tree:x64-windows@1.92.0
+  * boost-proto:x64-windows@1.92.0
+  * boost-qvm:x64-windows@1.92.0
+  * boost-random:x64-windows@1.92.0
+  * boost-range:x64-windows@1.92.0
+  * boost-ratio:x64-windows@1.92.0
+  * boost-rational:x64-windows@1.92.0
+  * boost-regex:x64-windows@1.92.0
+  * boost-serialization:x64-windows@1.92.0
+  * boost-smart-ptr:x64-windows@1.92.0
+  * boost-spirit:x64-windows@1.92.0
+  * boost-static-assert:x64-windows@1.92.0
+  * boost-system:x64-windows@1.92.0
+  * boost-thread:x64-windows@1.92.0
+  * boost-throw-exception:x64-windows@1.92.0
+  * boost-tokenizer:x64-windows@1.92.0
+  * boost-tti:x64-windows@1.92.0
+  * boost-tuple:x64-windows@1.92.0
+  * boost-type-index:x64-windows@1.92.0
+  * boost-type-traits:x64-windows@1.92.0
+  * boost-typeof:x64-windows@1.92.0
+  * boost-uninstall:x64-windows@1.92.0
+  * boost-unordered:x64-windows@1.92.0
+  * boost-utility:x64-windows@1.92.0
+  * boost-variant:x64-windows@1.92.0
+  * boost-variant2:x64-windows@1.92.0
+  * boost-winapi:x64-windows@1.92.0
+  * boost-xpressive:x64-windows@1.92.0
+    c-ares:x64-windows@1.34.9
+    curl[core,sspi,ssl]:x64-windows@8.23.0
+    libmysql:x64-windows@8.0.46
+    luajit:x64-windows@2026-10-30
+  * lz4:x64-windows@1.11.1
+    openssl:x64-windows@3.6.5#2
+  * rapidjson:x64-windows@2025-02-26#1
+  * vcpkg-boost:x64-windows@2026-08-21
+  * vcpkg-cmake:x64-windows@2025-08-07
+  * vcpkg-cmake-config:x64-windows@2026-07-21
+  * vcpkg-cmake-get-vars:x64-windows@2025-05-29
+    zlib:x64-windows@1.4
+    zstd:x64-windows@1.5.7
+c-ares provides CMake targets:
+
+  find_package(c-ares CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE c-ares::cares)
+
+c-ares provides pkg-config modules:
+
+  # asynchronous DNS lookup library
+  libcares
+
+zlib is compatible with built-in CMake targets:
+
+  find_package(ZLIB REQUIRED)
+  target_link_libraries(main PRIVATE ZLIB::ZLIB)
+
+zlib provides pkg-config modules:
+
+  # zlib compression library
+  zlib
+
+curl is compatible with built-in CMake targets:
+
+    find_package(CURL REQUIRED)
+    target_link_libraries(main PRIVATE CURL::libcurl)
+
+zstd provides CMake targets:
+
+  find_package(zstd CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE zstd::libzstd)
+
+openssl is compatible with built-in CMake targets:
+
+  find_package(OpenSSL REQUIRED)
+  target_link_libraries(main PRIVATE OpenSSL::SSL)
+  target_link_libraries(main PRIVATE OpenSSL::Crypto)
+
+libmysql provides CMake targets:
+
+    find_package(unofficial-libmysql REQUIRED)
+    target_link_libraries(main PRIVATE unofficial::libmysql::libmysql)
+
+luajit provides pkg-config modules:
+
+  # Just-in-time compiler for Lua
+  luajit
+
+All requested installations completed successfully in: 1.83 ms

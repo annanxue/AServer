@@ -1,7 +1,19 @@
 #ifndef __HTIME__
 #define __HTIME__
 
+#include "ffsys.h"
+#ifndef ASERVER_WINDOWS
 #include <sys/time.h>
+#else
+#include "ffsock.h"
+static inline int aserver_gettimeofday(struct timeval* tv, void*)
+{
+    tv->tv_sec = (long)time(NULL);
+    tv->tv_usec = 0;
+    return 0;
+}
+#define gettimeofday aserver_gettimeofday
+#endif
 #include <time.h>
 
 #define DEF_TM( tm ) \

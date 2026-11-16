@@ -2,6 +2,9 @@
 #define __APP_BASE__
 
 #include <signal.h>
+#ifdef _WIN32
+typedef void (__cdecl *sighandler_t)(int);
+#endif
 #include "lua_utils.h"
 #include "logic_thread.h"
 

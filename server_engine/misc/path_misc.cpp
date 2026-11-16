@@ -2,9 +2,15 @@
 #include "define.h"
 
 #include <string.h>
+#ifdef _WIN32
+#include <io.h>
+#include <direct.h>
+#endif
 #include <sys/stat.h>
 #include <sys/types.h>
+#ifndef _WIN32
 #include <dirent.h>
+#endif
 #include <errno.h>
 
 
@@ -23,19 +29,24 @@ int create_dir(const char* const _dir)
         tmp_dir_path[ tmp_dir_len ] = '\0';
         slash_pos++;
 
+#ifdef _WIN32
+        if (_access(tmp_dir_path, 0) != 0)
+        {
+            if (_mkdir(tmp_dir_path) != 0) return -1;
+        }
+#else
         DIR* dir_handle = opendir(tmp_dir_path);
-        if (dir_handle != NULL) 
+        if (dir_handle != NULL)
         {
             closedir(dir_handle);
             continue;
         }
-        //else dir_handle == NULL
-        if (errno != ENOENT) 
+        if (errno != ENOENT)
         {
             return -1;
         }
-
-        mkdir(tmp_dir_path, 0755); 
+        mkdir(tmp_dir_path, 0755);
+#endif
     }
     return 0;
 }

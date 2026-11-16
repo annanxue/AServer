@@ -49,7 +49,9 @@
 #define NUM_PATCHES_PER_SIDE			4
 #define PATCH_SIZE                      8
 
+#ifndef MAX_PATH
 #define MAX_PATH			256
+#endif
 #define MAX_BUFF_LEN	    8192
 #define MAX_BUFF_SIZE		500
 

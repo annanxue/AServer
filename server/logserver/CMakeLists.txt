@@ -1,38 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
-project(logserver)
+cmake_minimum_required(VERSION 3.15)
+project(logserver LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-add_compile_options(-Wno-narrowing)
-
-set(PROJBASE ${CMAKE_CURRENT_SOURCE_DIR}/../../)
-
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${PROJBASE}/lib/include
-)
-
-set(SOURCES
+add_executable(${PROJECT_NAME}
     log_svr_module.cpp
     log_lua_module.cpp
     gm_client_module.cpp
+    UnitTest/log_app.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-
-target_link_libraries(${PROJECT_NAME}
-    ${MYSQL_LIBRARY}
-    ${PROJBASE}/lib/libffluajit.a
-    ${PROJBASE}/lib/libtcmalloc.a
-    ${PROJBASE}/lib/libprofiler.a
-    CURL::libcurl
-    OpenSSL::SSL
-    OpenSSL::Crypto
-    ZLIB::ZLIB
-    zstd::libzstd_static
-    c-ares::cares
-    Threads::Threads
-    dl
-    rt
-)
+target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+target_link_libraries(${PROJECT_NAME} PRIVATE common aserver_deps)

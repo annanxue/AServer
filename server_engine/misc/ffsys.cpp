@@ -5,182 +5,159 @@
 #include <stdarg.h>
 #include "ffsys.h"
 
-//---------------------------------------------------------------------
-// ff_sleep
-//---------------------------------------------------------------------
-
 long ff_sleep(long time)
 {
-#ifdef __linux 	// usleep( time * 1000 );
-	usleep((time << 10) - (time << 4) - (time << 3));
-#elif defined(_WIN32)
-	Sleep(time);
+#ifdef ASERVER_POSIX
+    usleep((unsigned long)time * 1000);
+#elif defined(ASERVER_WINDOWS)
+    Sleep(time);
 #endif
-	return 0;
+    return 0;
 }
 
+long ff_sleep2(unsigned long time)
+{
+    return ff_sleep((long)time);
+}
 
-
-//---------------------------------------------------------------------
-// ff_clock
-//---------------------------------------------------------------------
 int64_t ff_clock(void)
 {
-#ifdef __linux
-	static struct timezone tz={ 0,0 };
-	struct timeval time;
-	gettimeofday(&time,&tz);
-	return (time.tv_sec*1000+time.tv_usec/1000);
-#elif defined(_WIN32)
-	return clock();
+#ifdef ASERVER_POSIX
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return (int64_t)tv.tv_sec * 1000 + tv.tv_usec / 1000;
+#elif defined(ASERVER_WINDOWS)
+    return (int64_t)GetTickCount64();
 #endif
 }
 
-//---------------------------------------------------------------------
-// ff_timeofday
-//---------------------------------------------------------------------
 long ff_timeofday(long *sec, long *usec)
 {
-#ifdef __linux
-	static struct timezone tz={ 0,0 };
-	struct timeval time;
-	gettimeofday(&time,&tz);
-	if (sec) *sec = time.tv_sec;
-	if (usec) *usec = time.tv_usec;
-#elif defined(_WIN32)
-	static long mode = 0, addsec = 0;
-#ifdef _MSC_VER
-	static __int64 freq = 1;
-	__int64 qpc;
-#else
-	static long long freq = 1;
-	long long qpc;
+#ifdef ASERVER_POSIX
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    if (sec) *sec = (long)tv.tv_sec;
+    if (usec) *usec = (long)tv.tv_usec;
+#elif defined(ASERVER_WINDOWS)
+    static long mode = 0;
+    static long addsec = 0;
+    static int64_t freq = 1;
+    int64_t qpc = 0;
+    if (mode == 0)
+    {
+        LARGE_INTEGER li;
+        QueryPerformanceFrequency(&li);
+        freq = li.QuadPart ? li.QuadPart : 1;
+        QueryPerformanceCounter(&li);
+        qpc = li.QuadPart;
+        addsec = (long)time(NULL) - (long)((qpc / freq) & 0x7fffffff);
+        mode = 1;
+    }
+    LARGE_INTEGER li;
+    QueryPerformanceCounter(&li);
+    qpc = li.QuadPart;
+    if (sec) *sec = (long)(qpc / freq) + addsec;
+    if (usec) *usec = (long)((qpc % freq) * 1000000 / freq);
 #endif
-	if (mode == 0)
-	{
-		QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
-		freq = (freq == 0)? 1 : freq;
-		QueryPerformanceCounter((LARGE_INTEGER*)&qpc);
-		addsec = (long)time(NULL);
-		addsec = addsec - (long)((qpc / freq) & 0x7fffffff);
-		mode = 1;
-	}
-	QueryPerformanceCounter((LARGE_INTEGER*)&qpc);
-	if (sec) *sec = (long)(qpc / freq) + addsec;
-	if (usec) *usec = (long)((qpc % freq) * 1000000 / freq);
-#endif
-
-	return 0;
+    return 0;
 }
 
 #ifdef FF_MULTI_THREAD
 
-//---------------------------------------------------------------------
-// ff_thread_create
-//---------------------------------------------------------------------
 long ff_thread_create(pthread_t* tid, const ff_thread_start tproc, const void *tattr, void *targs)
 {
-#ifdef __linux
-	pthread_attr_t threadattr;
-	pthread_attr_init( &threadattr );
-//	pthread_attr_setstacksize(&threadattr, (size_t)(64 * 1024 ) );	//for auto player
-	long ret = pthread_create(tid, &threadattr, (void*(*)(void*)) tproc, targs);
-	pthread_attr_destroy( &threadattr );
-	if (ret) return -1;
-#elif defined(_WIN32)
-	long ret = (int)_beginthread((void(*)(void*))tproc, 0, targs);
-	if (tid) *tid = (pthread_t)ret;
-	if (ret < 0) return -1;
+    (void)tattr;
+#ifdef ASERVER_POSIX
+    pthread_attr_t threadattr;
+    pthread_attr_init(&threadattr);
+    int ret = pthread_create(tid, &threadattr, (void*(*)(void*))tproc, targs);
+    pthread_attr_destroy(&threadattr);
+    return ret ? -1 : 0;
+#elif defined(ASERVER_WINDOWS)
+    uintptr_t ret = _beginthread((void (*)(void*))tproc, 0, targs);
+    if (ret == (uintptr_t)-1) return -1;
+    if (tid) *tid = ret;
+    return 0;
 #endif
-	return 0;
 }
 
-//---------------------------------------------------------------------
-// ff_thread_exit
-//---------------------------------------------------------------------
 long ff_thread_exit(long retval)
 {
-#ifdef __linux
-	pthread_exit(NULL);
-#elif defined(_WIN32)
-	_endthread();
+    (void)retval;
+#ifdef ASERVER_POSIX
+    pthread_exit(NULL);
+#elif defined(ASERVER_WINDOWS)
+    _endthread();
 #endif
-	return 0;
+    return 0;
 }
 
-//---------------------------------------------------------------------
-// ff_thread_join
-//---------------------------------------------------------------------
-long ff_thread_join(long threadid)
+long ff_thread_join(pthread_t threadid)
 {
-	long status;
-#ifdef __linux
-	status = pthread_join((pthread_t)threadid, (void**)&status);
-#elif defined(_WIN32)
-	status = WaitForSingleObject((HANDLE)threadid, INFINITE);
+#ifdef ASERVER_POSIX
+    return (long)pthread_join(threadid, NULL);
+#elif defined(ASERVER_WINDOWS)
+    return (long)WaitForSingleObject((HANDLE)threadid, INFINITE);
 #endif
-	return status;
 }
 
-//---------------------------------------------------------------------
-// ff_thread_detach
-//---------------------------------------------------------------------
-long ff_thread_detach(long threadid)
+long ff_thread_detach(pthread_t threadid)
 {
-	long status;
-#ifdef __linux
-	status = pthread_detach((pthread_t)threadid);
-#elif defined(_WIN32)
-	CloseHandle((HANDLE)threadid);
-	status = 0;
+#ifdef ASERVER_POSIX
+    return (long)pthread_detach(threadid);
+#elif defined(ASERVER_WINDOWS)
+    CloseHandle((HANDLE)threadid);
+    return 0;
 #endif
-	return status;
 }
 
-//---------------------------------------------------------------------
-// ff_thread_kill
-//---------------------------------------------------------------------
-long ff_thread_kill(long threadid)
+long ff_thread_kill(pthread_t threadid)
 {
-#ifdef __linux
-	pthread_cancel((pthread_t)threadid);
-#elif defined(_WIN32)
-	TerminateThread((HANDLE)threadid, 0);
+#ifdef ASERVER_POSIX
+    pthread_cancel(threadid);
+#elif defined(ASERVER_WINDOWS)
+    TerminateThread((HANDLE)threadid, 0);
 #endif
-	return 0;
+    return 0;
 }
 
-// multi thread
-#endif
+#endif /* FF_MULTI_THREAD */
 
-char* ff_strcpy( char* _dest, size_t _dest_size, const char* _src )
+char* ff_strcpy(char* dest, size_t dest_size, const char* src)
 {
-#ifdef __linux
-    return strcpy( _dest, _src );
-#else
-    strcpy_s( _dest, _dest_size, _src );
-    return _dest;
-#endif
+    (void)dest_size;
+    return strcpy(dest, src);
 }
 
-char* ff_strncpy( char* _dest, size_t _dest_size, const char* _src, size_t _count )
+char* ff_strncpy(char* dest, size_t dest_size, const char* src, size_t count)
 {
-#ifdef __linux
-    return strncpy( _dest, _src, _count );
-#else
-    strncpy_s( _dest, _dest_size, _src, _count );
-    return _dest;
-#endif
+    (void)dest_size;
+    return strncpy(dest, src, count);
 }
 
-int32_t ff_sprintf( char* _dest, size_t _dest_size, const char* _format, ... )
+#ifdef ASERVER_WINDOWS
+size_t strlcpy(char* dst, const char* src, size_t size)
+{
+    size_t src_len = strlen(src);
+    if (size > 0)
+    {
+        size_t copy_len = (src_len >= size) ? size - 1 : src_len;
+        memcpy(dst, src, copy_len);
+        dst[copy_len] = '\0';
+    }
+    return src_len;
+}
+#endif
+
+int32_t ff_sprintf(char* dest, size_t dest_size, const char* format, ...)
 {
     va_list args;
-    va_start( args, _format );
-#ifdef __linux
-    return vsprintf( _dest, _format, args );
+    va_start(args, format);
+#ifdef _MSC_VER
+    int ret = vsnprintf_s(dest, dest_size, _TRUNCATE, format, args);
 #else
-    return vsprintf_s( _dest, _dest_size, _format, args );
+    int ret = vsnprintf(dest, dest_size, format, args);
 #endif
+    va_end(args);
+    return ret;
 }
-

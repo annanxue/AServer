@@ -41,6 +41,10 @@
 #include <math.h>
 #include <limits.h>
 
+#ifdef _WIN32
+#define strncasecmp _strnicmp
+#endif
+
 #include "lua.h"
 #include "lauxlib.h"
 #include "strbuf.h"

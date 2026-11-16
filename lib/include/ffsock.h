@@ -1,7 +1,10 @@
 #ifndef __FF_SOCK_H__
 #define __FF_SOCK_H__
 
-#if defined(__linux)
+#include "ffsys.h"
+
+#if defined(__linux) || defined(__linux__) || defined(__APPLE__) || \
+    defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
 #include <string.h>
 #include <unistd.h>
 #include <signal.h>
@@ -16,24 +19,41 @@
 #include <arpa/inet.h>
 #include <poll.h>
 
-#define DSOCKERR		-1
-#define DWOULDBLOCK		EWOULDBLOCK
-#define DCONNECTERR		EINPROGRESS
+#define DSOCKERR -1
+#define DWOULDBLOCK EWOULDBLOCK
+#define DCONNECTERR EINPROGRESS
 
 #elif defined(_WIN32)
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0601
+#endif
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+/* select() 默认仅支持 64 个 fd，服务端需要更高上限 */
+#ifndef FD_SETSIZE
+#define FD_SETSIZE 4096
+#endif
 #include <windows.h>
-#include <winsock.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
 
-#define DSOCKERR		SOCKET_ERROR
-#define DWOULDBLOCK		WSAEWOULDBLOCK
-#define DCONNECTERR		WSAEWOULDBLOCK
-
-#define socklen_t long
-#else
-#error Unknow platform, only support linux and win32
+#define DSOCKERR SOCKET_ERROR
+#define DWOULDBLOCK WSAEWOULDBLOCK
+#define DCONNECTERR WSAEINPROGRESS
+typedef int socklen_t;
+#ifndef in_addr_t
+typedef unsigned long in_addr_t;
+#endif
+#ifndef ulong
+typedef unsigned long ulong;
 #endif
 
-#define CONNECT_TIMEOUT	10
+#else
+#error Unsupported platform: only Windows, Linux and BSD/macOS are supported
+#endif
+
+#define CONNECT_TIMEOUT 10
 
 #ifdef __cplusplus
 extern "C" {
@@ -63,5 +83,4 @@ int ff_peername(int sock, struct sockaddr *addr);
 }
 #endif
 
-#endif
-
+#endif /* __FF_SOCK_H__ */

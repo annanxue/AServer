@@ -44,20 +44,7 @@ inline u_long id_hash( u_long id, size_t HashSize )
 /*!< 这个函数用来判断是否是2的幂,方法是判断该数字转换为2进制以后是否只有一个1*/
 inline int is2power( int hash_id )
 {
-    int ret = 0;
-    __asm__ __volatile__(
-            "bsfl %1, %%eax\n\t"
-            "bsrl %1, %%ecx\n\t"
-            "movl $0, %0\n\t"
-            "xorl %%ecx, %%eax\n\t"
-            "jnz 1f\n\t"
-            "movl $1, %0\n\t"
-            "1:\n\t"
-            :"=r"(ret)
-            :"r"(hash_id)
-            :"eax","ecx");
-
-    return ret;
+    return (hash_id > 0 && (hash_id & (hash_id - 1)) == 0) ? 1 : 0;
 }
 
 /*

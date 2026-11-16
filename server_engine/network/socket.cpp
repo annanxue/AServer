@@ -107,22 +107,20 @@ int Socket::Connect(const sockaddr *addr)
 {
 	if ( ( DSOCKERR == ff_connect(sock, addr) ) && ( DCONNECTERR == ff_errno() ) )
 	{
-        /*
-		fd_set fdw,fde;
+		fd_set fdw, fde;
 		struct timeval tv;
 
 		FD_ZERO(&fdw);
 		FD_ZERO(&fde);
-		FD_SET(sock, &fdw);
-		FD_SET(sock, &fde);
+		FD_SET((SOCKET)sock, &fdw);
+		FD_SET((SOCKET)sock, &fde);
 		tv.tv_sec = CONNECT_TIMEOUT;
 		tv.tv_usec = 0;
 
 		int ret = select(sock + 1, NULL, &fdw, &fde, &tv);
-
-		if( ret > 0 && FD_ISSET(sock, &fdw) && !FD_ISSET(sock, &fde) )
+		if( ret > 0 && FD_ISSET((SOCKET)sock, &fdw) && !FD_ISSET((SOCKET)sock, &fde) )
 		{
-#ifdef __linux
+#ifdef ASERVER_POSIX
 			int val,len = sizeof(val);
 			if( !GetOption(SOL_SOCKET, SO_ERROR, (char*)&val, &len) && val )
 			{
@@ -132,24 +130,6 @@ int Socket::Connect(const sockaddr *addr)
 #endif
 			return 0;
 		}
-        */
-        pollfd fds[1];
-        fds[0].fd = sock;
-        fds[0].events = POLLOUT;
-
-        int ret = poll( fds, 1, CONNECT_TIMEOUT*1000 );
-        if( ret > 0 )
-        {
-#ifdef __linux
-			int val,len = sizeof(val);
-			if( !GetOption(SOL_SOCKET, SO_ERROR, (char*)&val, &len) && val )
-			{
-				errno = val;
-				return -1;
-			}
-#endif
-            return 0;
-        }
 	}
 	return -1;
 }

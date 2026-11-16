@@ -4,7 +4,7 @@
 #include "lua_server.h"
 #include "lmisc.h"
 
-extern uint32_t g_frame;
+extern int g_frame;
 LuaServer* lua_timer = NULL;
 
 const char TimerMng::className[] = "TimerMng";

@@ -25,7 +25,15 @@ int PcQueue::get_userdata( void** data, long  time )
 #ifdef __linux
 	return pcqueue_get( &queue, data );
 #else
-	return GetQueuedCompletionStatus( queue, (unsigned long *)data, &key, &ov, time );
+	DWORD bytes = 0;
+	LPOVERLAPPED completion = NULL;
+	BOOL ok = GetQueuedCompletionStatus( queue, &bytes, &key, &completion, (DWORD)time );
+	if ( ok && completion )
+	{
+		*data = (void*)completion;
+		return 0;
+	}
+	return -1;
 #endif
 }
 
@@ -34,8 +42,7 @@ int PcQueue::post_userdata( void* data, long time )
 #ifdef __linux
 	return pcqueue_post( &queue, data );
 #else
-    PostQueuedCompletionStatus( queue, (ULONG)data, TRUE, NULL );
-	return -1;
+	return PostQueuedCompletionStatus( queue, 0, 0, (LPOVERLAPPED)data ) ? 0 : -1;
 #endif
 }
 

@@ -244,17 +244,12 @@ int CommonSocket::do_recv(Buffer ** buf)
 
 	if ( need_crypt_ )
 	{
-#ifdef __linux
 		if ( flow_rate_recv_.is_over_flow_with_frame(ret) )
 		{
 			ERR(2)("[NET](common_socket) CommonSocket::do_recv() over flow");
-			return -1;			
+			return -1;
 		}
 		ctx_encode( ctx_recv_, buf_recved, ret );
-#else
-		ctx_encode_recv( buf_recved, ret );
-#endif
-		
 	}
 
 	recv_buf_->tail_ += ret;
@@ -420,13 +415,8 @@ void CommonSocket::set_seed(int seed)
 {
 	if ( need_crypt_ )
 	{
-#ifdef __linux
 		ctx_init( seed, ctx_send_ );
 		ctx_init( seed, ctx_recv_ );
-#else
-		ctx_init( seed );
-#endif
-
 	}
 	seed_ = seed;
 }

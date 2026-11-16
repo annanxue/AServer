@@ -1,11 +1,17 @@
 #ifndef __MISC_H__
 #define __MISC_H__
 
+#include "ffsys.h"
 #include <sys/types.h>
+#ifdef ASERVER_POSIX
 #include <sys/time.h>
+#endif
 #include <time.h>
 #include <assert.h>
 #include <string.h>
+#ifdef ASERVER_WINDOWS
+#include "ffsock.h"
+#endif
 #include "mylist.h"
 
 #ifndef FALSE 
@@ -30,13 +36,9 @@
                (pNetMng)->send_msg( lpBuf, nBufSize, (idTo) );	\
        }
 
-#ifdef __linux
-
 unsigned int msec();
 
 bool is_letter_or_digit( char c );
-
-#endif
 
 // inline char* strlcpy( char* dest, const char* src, size_t n )
 // {
@@ -114,12 +116,13 @@ inline void path_to_unix( char* buf, int len )
 
 
 
-#define rdtscll(val) \
-     __asm__ __volatile__("rdtsc" : "=A" (val))
-
-
-#define rdtscl(low) \
-     __asm__ __volatile__("rdtsc" : "=a" (low) : : "edx")
+#ifdef ASERVER_POSIX
+#define rdtscll(val) __asm__ __volatile__("rdtsc" : "=A" (val))
+#define rdtscl(low) __asm__ __volatile__("rdtsc" : "=a" (low) : : "edx")
+#else
+#define rdtscll(val) ((val) = 0)
+#define rdtscl(low) ((low) = 0)
+#endif
 
 
 #define TICK( name ) \

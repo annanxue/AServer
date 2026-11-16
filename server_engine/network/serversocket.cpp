@@ -1,5 +1,3 @@
-#ifdef __linux
-
 #include "log.h"
 #include "serversocket.h"
 #include "clientsocket.h"
@@ -81,5 +79,3 @@ int ServerSocket::process(int events, NetMng * parent)
 }
 
 }
-
-#endif //__linux

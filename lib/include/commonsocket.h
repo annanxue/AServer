@@ -9,12 +9,8 @@
 #include "log.h"
 
 
-#ifdef __linux
-	#include "pike.h"
-	#include "flow_rate.h"
-#else
-	#include "pike_lua.h"
-#endif
+#include "pike.h"
+#include "flow_rate.h"
 
 namespace FF_Network {
 
@@ -74,9 +70,7 @@ private:
 
     volatile bool   is_ok_;
 
-#ifdef __linux
 	ff_ctx			ctx_send_, ctx_recv_;
-#endif
 	
 
 	int				act_send(const char * buf, int length); /*!< 实际发送函数*/
@@ -87,10 +81,8 @@ private:
 								dpid的高16位为serial number,低16位为该socket的fd值. */
 
 	EndPoint		peer_addr_;
-#ifdef __linux
 	FlowRate		flow_rate_recv_;
 	FlowRate		flow_rate_send_;
-#endif
 
     in_addr_t       real_ip_;
 

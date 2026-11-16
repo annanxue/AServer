@@ -31,7 +31,7 @@ private:
 #ifdef __linux
 	pcqueue_t queue;
 #elif defined(_WIN32)
-	unsigned long key;
+	ULONG_PTR key;
 	LPOVERLAPPED ov;
 	HANDLE queue;
 #endif

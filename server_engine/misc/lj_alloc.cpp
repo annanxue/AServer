@@ -34,6 +34,7 @@
 
 #include <stdio.h>
 #include <time.h>
+#include "ffsys.h"
 
 #ifndef LUAJIT_USE_SYSMALLOC
 

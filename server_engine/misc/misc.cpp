@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "ffsys.h"
+#include "misc.h"
+#ifdef ASERVER_POSIX
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <string.h>
-
-//#include "game_svr.h"
-#include <ctype.h>
-#include "ffsys.h"
-#include "misc.h"
 #include <execinfo.h>
+#else
+#include <sys/stat.h>
+#include <fcntl.h>
+#endif
 #include "mymap.hpp"
 #include "mymap32.h"
 
-#ifdef __linux
 extern int g_frame;
 
 #define LIB_YEAR ((((__DATE__ [7] - '0') * 10 + (__DATE__ [8] - '0')) * 10 + (__DATE__ [9] - '0')) * 10 + (__DATE__ [10] - '0'))
@@ -79,16 +81,11 @@ int is_lib_time_out()
 }
 
 unsigned int msec()
-{	
-    static struct timeval tmboot = {0, 0};
-    struct timezone tz;
-	struct timeval tv;
-    if(tmboot.tv_sec == 0) {
-        gettimeofday(&tmboot,&tz);
-        tmboot.tv_usec = 0;
-    }
-	gettimeofday(&tv,&tz);
-    return (unsigned int)((tv.tv_sec - tmboot.tv_sec) * 1000 + tv.tv_usec * 0.001);
+{
+    static int64_t boot_ms = 0;
+    int64_t now = ff_clock();
+    if (boot_ms == 0) boot_ms = now;
+    return (unsigned int)(now - boot_ms);
 }
 
 
@@ -253,7 +250,8 @@ void log_all_tick()
 void track()
 {
     /*!\todo loon*/
-    return ;
+    return;
+#ifdef ASERVER_POSIX
     int i = 0;
     void *bt[128] = {0,};
     int bt_size = 0;
@@ -266,12 +264,15 @@ void track()
     }
     free( rt );
     TRACE(1)( "[MISC](backtrace)-------------TRACE-END------------" );
-
+#endif
 }
 
 
 int get_mm()
 {
+#ifndef ASERVER_POSIX
+    return 0;
+#else
     pid_t pid = getpid();
     char name[MAX_PATH] = {0,};
     snprintf( name, sizeof(name), "/proc/%d/status", pid );
@@ -333,10 +334,14 @@ int get_mm()
     }  
 //    return wm_size;
     return vm_size;
+#endif
 }
 
 unsigned long long get_cpu_tick()
 {
+#ifndef ASERVER_POSIX
+    return 0;
+#else
     char name[MAX_PATH] = {0,};
     snprintf( name, sizeof(name), "/proc/cpuinfo" );
 
@@ -369,6 +374,7 @@ unsigned long long get_cpu_tick()
         }
     }
     return 2000 * 1000000;
+#endif
 }
 
 
@@ -565,5 +571,3 @@ u_long ip2num( const char* ip )
 
     return (u_long)(v1*16777216 + v2*65536 + v3*256 + v4);
 }
-
-#endif

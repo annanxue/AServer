@@ -1,7 +1,6 @@
 #ifndef _MIN_HEAP_H_
 #define _MIN_HEAP_H_
 
-#include <sys/time.h>
 #include <stdlib.h>
 using namespace std;
 
