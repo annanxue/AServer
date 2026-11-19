@@ -159,6 +159,7 @@ bool PlayerLoginSvrModule::app_class_init()
     int32_t proc_thread_num = 4;
     int32_t timeout_time = 0;
     int32_t android_version = 0;
+    char ip[APP_CFG_NAME_MAX] = {0};
     int32_t ios_version = 0;
 
     APP_GET_NUMBER( "AndroidVersion", android_version ); 
@@ -166,6 +167,7 @@ bool PlayerLoginSvrModule::app_class_init()
     APP_GET_STRING( "GameSvrConfigUrl", g_player_login_svr->gamesvr_config_url_ ); 
 
     APP_GET_TABLE( "PlayerLoginSvr", 2 );
+    APP_GET_STRING( "IP", ip );
     APP_GET_NUMBER( "MaxCon", max_con );
     APP_GET_NUMBER( "Port", port );
     APP_GET_NUMBER( "Crypt", crypt );
@@ -186,7 +188,7 @@ bool PlayerLoginSvrModule::app_class_init()
 
     g_player_login_svr->set_timeout( timeout_time * g_timermng->get_frame_rate() );
 
-    if( g_player_login_svr->start_server( max_con, port, crypt, NULL, poll_wait_time, proc_thread_num ) < 0 )
+    if( g_player_login_svr->start_server( max_con, port, crypt, strlen(ip) > 0 ? ip : NULL, poll_wait_time, proc_thread_num ) < 0 )
     {
         ERR(2)( "[PlayerLoginSvrModule](app_class_init)start_server failed. port: %d, max_con: %d", port, max_con );
         return false;

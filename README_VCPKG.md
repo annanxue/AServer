@@ -25,7 +25,17 @@ build_windows.bat Release x64-windows
 
 产物位于 `bin/`。
 
-## 3. 编译（Linux / WSL）
+## 3. Windows 核心协议冒烟测试
+
+在构建完成且同级目录存在 `ahxt_server` 运行时数据后执行：
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:/C++/AHServer/AServer/tests/robot_smoke/run_core_smoke.ps1 -KeepTemp
+```
+
+脚本会在 `%TEMP%` 创建隔离运行时，启动 `logserver`、`loginserver`、`gameserver` 和 `robotclient`，记录端口/进程/应用日志并输出 `result.json`。成功返回 `0`，代码或协议失败返回 `1`，明确外部依赖阻塞返回 `2`。当前 Windows PowerShell 5.1 环境没有 `pwsh` 时使用上面的 `powershell.exe` 命令；失败时保留临时目录并打印路径。
+
+## 4. 编译（Linux / WSL）
 
 ```bash
 git clone https://github.com/microsoft/vcpkg.git ~/vcpkg
@@ -35,7 +45,7 @@ cd /mnt/e/C++/AHServer/AServer
 bash build_wsl.sh Release x64-linux
 ```
 
-## 4. 依赖清单
+## 5. 依赖清单
 
 | 包 | 用途 |
 |---|---|
@@ -52,7 +62,7 @@ gperftools (tcmalloc/profiler) 为可选项，默认关闭。如需启用：
 cmake -S . -B build_win -DASERVER_ENABLE_TCMALLOC=ON ...
 ```
 
-## 5. 常见问题
+## 6. 常见问题
 
 - **找不到 vcpkg**：确认 `VCPKG_ROOT` 指向包含 `scripts/buildsystems/vcpkg.cmake` 的目录。
 - **MySQL 头文件缺失**：vcpkg 的 `libmysql` 头文件位于 `include/mysql/`，CMake 会自动加入搜索路径。

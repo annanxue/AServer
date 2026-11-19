@@ -18,6 +18,8 @@ class DBClient : public NetMng
     public:
         virtual void msg_handle( const char* _msg, int _size, int _packet_type, DPID _dpid );
         void send_last_msg();
+        void set_enabled( bool _enabled ) { enabled_ = _enabled; }
+        bool is_enabled() const { return enabled_; }
     private:
         void init_func_map();
         void on_connect( Ar& _ar, DPID _dpid, const char* _buf, u_long _buf_size );
@@ -26,6 +28,7 @@ class DBClient : public NetMng
         void lua_msg_handle( lua_State* _L, const char* _msg, int _size, int _packet_type, DPID _dpid );
         void send_register_server_id();
     private:
+        bool enabled_;
         void (DBClient::*func_map_[PT_PACKET_MAX])( Ar& _ar, DPID _dpid, const char* _buf, u_long _buf_size );
     public:
         int32_t  c_is_connected( lua_State* _L );

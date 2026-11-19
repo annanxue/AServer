@@ -65,7 +65,7 @@ void GameThread::check_stop()
         g_gamesvr->kick_all_player();
         g_gamesvr->on_server_pre_stop();
         
-        if (g_connect_thread->is_connected()){
+        if (g_dbclient->is_enabled() && g_connect_thread->is_connected()){
             LOG(2)("wait db to recv all and close connection");
             g_dbclient->send_last_msg();
         }else{
@@ -80,7 +80,10 @@ void GameThread::recv_msg()
 {
     TICK(A);
     g_gamesvr->receive_msg();
-    g_dbclient->receive_msg();
+    if( g_dbclient->is_enabled() )
+    {
+        g_dbclient->receive_msg();
+    }
     g_loginclient->receive_msg();
     g_gmclient->receive_msg();
     g_bfclient->receive_msg();
@@ -93,7 +96,10 @@ void GameThread::recv_msg()
 void GameThread::process()
 {
     TICK(A);
-    g_worldmng->process();
+    if( !g_gamesvr->is_smoke_mode() )
+    {
+        g_worldmng->process();
+    }
     TICK(B);
     mark_tick( TICK_PROCESS, A, B );
 

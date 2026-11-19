@@ -105,30 +105,43 @@ int Socket::SendTo(const void *buf, long size, int mode, const sockaddr *addr)
 
 int Socket::Connect(const sockaddr *addr)
 {
-	if ( ( DSOCKERR == ff_connect(sock, addr) ) && ( DCONNECTERR == ff_errno() ) )
+	const int connect_result = ff_connect(sock, addr);
+	if( connect_result == 0 )
+	{
+		return 0;
+	}
+	const int connect_error = ff_errno();
+	if ( DSOCKERR == connect_result && ( DCONNECTERR == connect_error || DWOULDBLOCK == connect_error ) )
 	{
 		fd_set fdw, fde;
 		struct timeval tv;
 
 		FD_ZERO(&fdw);
 		FD_ZERO(&fde);
-		FD_SET((SOCKET)sock, &fdw);
-		FD_SET((SOCKET)sock, &fde);
+		FD_SET(sock, &fdw);
+		FD_SET(sock, &fde);
 		tv.tv_sec = CONNECT_TIMEOUT;
 		tv.tv_usec = 0;
 
 		int ret = select(sock + 1, NULL, &fdw, &fde, &tv);
-		if( ret > 0 && FD_ISSET((SOCKET)sock, &fdw) && !FD_ISSET((SOCKET)sock, &fde) )
+		if( ret > 0 && ( FD_ISSET(sock, &fdw) || FD_ISSET(sock, &fde) ) )
 		{
-#ifdef ASERVER_POSIX
-			int val,len = sizeof(val);
-			if( !GetOption(SOL_SOCKET, SO_ERROR, (char*)&val, &len) && val )
+			int val = 0;
+			int len = sizeof(val);
+			if( GetOption(SOL_SOCKET, SO_ERROR, (char*)&val, &len) != 0 )
 			{
-				errno = val;
 				return -1;
 			}
+			if( val != 0 )
+			{
+#ifdef _WIN32
+				WSASetLastError( val );
+#else
+				errno = val;
 #endif
-			return 0;
+				return -1;
+			}
+			return FD_ISSET(sock, &fdw) ? 0 : -1;
 		}
 	}
 	return -1;

@@ -35,6 +35,8 @@ class GameSvr : public NetMng
 		void set_ema_gift_order_url_ack(const char* _url) { strncpy(ema_gift_order_url_ack_, _url, sizeof(ema_gift_order_url_ack_)); }
         void set_mipush_tag( const char* _tag ) { strncpy( mipush_tag_, _tag, sizeof( mipush_tag_ ) ); }
         void set_game_id( const char* _game_id) { strncpy( game_id_, _game_id, sizeof( game_id_) ); }
+        void set_smoke_mode( bool _enabled ) { smoke_mode_ = _enabled; }
+        bool is_smoke_mode() const { return smoke_mode_; }
 
     private:
         void init_func_map();
@@ -50,6 +52,7 @@ class GameSvr : public NetMng
         int32_t crypt_;
         int32_t poll_wait_time_;
         int32_t proc_thread_num_;
+        bool smoke_mode_;
 
 		bool    is_china_;
 

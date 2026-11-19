@@ -43,7 +43,8 @@ GameSvr::GameSvr()
     port_ = 0;
     crypt_ = 1;
     poll_wait_time_ = 100;
-    proc_thread_num_ = 4; 
+    proc_thread_num_ = 4;
+    smoke_mode_ = false;
     allow_shops_on_bf_ = false;
     allow_wild_cross_zone_ = false;
     memset( gamesvr_config_url_, 0, sizeof( gamesvr_config_url_ ));
@@ -359,6 +360,7 @@ bool GameSvrModule::app_class_init()
     int32_t timeout_time = 0;
     int32_t allow_shops_on_bf = 0;
     int32_t allow_wild_cross_zone = 0;
+    int32_t smoke_mode = 0;
 
 	int32_t is_china = 0;
 
@@ -377,6 +379,7 @@ bool GameSvrModule::app_class_init()
 
     APP_GET_NUMBER( "AllowShopsOnBF", allow_shops_on_bf );
     APP_GET_NUMBER( "AllowWildCrossZone", allow_wild_cross_zone );
+    APP_GET_NUMBER( "SmokeMode", smoke_mode );
     APP_GET_STRING( "GameSvrConfigUrl", gamesvr_config_url ); 
     APP_GET_STRING( "GameArea", game_area ); 
 	APP_GET_NUMBER("IsChina", is_china);
@@ -413,6 +416,7 @@ bool GameSvrModule::app_class_init()
     g_gamesvr->set_timeout( timeout_time * g_timermng->get_frame_rate() );
 
     g_gamesvr->set_start_param( max_con, ip, port, crypt, poll_wait_time, proc_thread_num );
+    g_gamesvr->set_smoke_mode( smoke_mode != 0 );
 
     g_gamesvr->set_allow_shops_on_bf( allow_shops_on_bf != 0 );
 
@@ -438,9 +442,22 @@ bool GameSvrModule::app_class_init()
 
     g_gamesvr->lua_set_max_user_num( g_luasvr->L(), max_con );
 
-
-    LOG(2)( "===========GameSvr Module Start===========");
-    LOG(2)( "===========WAIT GLOBAL SYSTEM DATA FROM DB to START SERVER===========");
+    if( smoke_mode != 0 )
+    {
+        const int ret = g_gamesvr->start_server( max_con, port, crypt, ip, poll_wait_time, proc_thread_num );
+        if( ret < 0 )
+        {
+            ERR(2)( "[GameSvrModule] SmokeMode start_server failed, port: %d", port );
+            return false;
+        }
+        Ctrl::set_netmng( g_gamesvr );
+        LOG(2)( "===========GameSvr SmokeMode Listener Started===========" );
+    }
+    else
+    {
+        LOG(2)( "===========GameSvr Module Start===========" );
+        LOG(2)( "===========WAIT GLOBAL SYSTEM DATA FROM DB to START SERVER===========" );
+    }
 
     return true;
 }

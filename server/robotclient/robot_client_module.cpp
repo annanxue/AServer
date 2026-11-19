@@ -262,12 +262,14 @@ bool RobotClientModule::app_class_init()
     int32_t poll_wait_time = 100;
     int32_t sleep_time = 100;
     int32_t player_num = 3000;
+    int32_t max_con = 0;
     int32_t robot_type = 0;
     int32_t begin_num = 0;
     char login_type[APP_CFG_NAME_MAX] = {0};
 
     APP_GET_TABLE( "RobotClient", 2 );
     APP_GET_NUMBER( "PlayerNum", player_num );
+    APP_GET_NUMBER( "MaxCon", max_con );
     APP_GET_NUMBER( "RobotType", robot_type );
     APP_GET_STRING( "LoginSvrIP", loginsvr_ip );
     APP_GET_NUMBER( "LoginSvrPort", loginsvr_port );
@@ -295,8 +297,12 @@ bool RobotClientModule::app_class_init()
     g_robotclient->set_gamesvr_id( gamesvr_id );
     g_robotclient->set_gamesvr_addr( gamesvr_ip, gamesvr_port );
 
-    g_robotclient->init_multi_client( player_num, poll_wait_time );
-    g_multi_connect_thread->init( g_robotclient, player_num, crypt, sleep_time );
+    if( max_con < player_num )
+    {
+        max_con = player_num;
+    }
+    g_robotclient->init_multi_client( max_con, poll_wait_time );
+    g_multi_connect_thread->init( g_robotclient, max_con, crypt, sleep_time );
     for( int32_t i = 0; i < player_num; i++ )
     {
         g_multi_connect_thread->add_conn( loginsvr_ip, loginsvr_port );

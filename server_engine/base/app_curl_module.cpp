@@ -274,7 +274,7 @@ HttpRequest* HttpTask::reset_http_request_opt( HttpRequest* _request, const char
     // set post data
     _request->post_data_.set_str( _post_data );
 	if (!_post_data || strlen(_post_data) == 0) {
-		// post dataÎª¿Õ , Ö´ÐÐhttpgetÇëÇóI
+		// post dataä¸ºç©º , æ‰§è¡Œhttpgetè¯·æ±‚I
 		curl_easy_setopt(_request->curl_, CURLOPT_HTTPGET, 1);
 	}
 	else  {
@@ -590,15 +590,25 @@ bool CurlModule::app_class_init()
     openssl_thread_support = 1;
 #endif
     int task_num = 1;
+    int smoke_mode = 0;
     APP_GET_NUMBER( "HttpTaskNum", task_num );
+    APP_GET_NUMBER( "SmokeMode", smoke_mode );
 
     curl_global_init( CURL_GLOBAL_ALL );
-    query_auth();
-    query_lib_timeout();
-    query_app_key( app_base_->L );
-    decode_app_key();
+    if( smoke_mode == 0 )
+    {
+        query_auth();
+        query_lib_timeout();
+        query_app_key( app_base_->L );
+        decode_app_key();
+    }
+    else
+    {
+        g_app_key.set_str( "smoke-test-key" );
+        LOG(2)( "[CurlModule] SmokeMode enabled; skip remote auth/time/app-key queries" );
+    }
 
-    if( is_lib_time_out() )
+    if( smoke_mode == 0 && is_lib_time_out() )
     {
         FLOG( "./app_trace.log", "fatal error: lib timeout. rebuild it and restart server");
         return false;

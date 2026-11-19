@@ -105,7 +105,7 @@ FILE* NLog::open_log_file( const char *name )
 	else {
 		snprintf(filename, MAX_PATH, "%s/%s.log", log_path_, name);
 	}
-	return fopen( filename, "aw+" );
+	return fopen( filename, "a+" );
 }
 
 void NLog::change_color( int _type, LogBuffer* _buffer )
@@ -545,7 +545,7 @@ void NLog::write_file( const char* _filename, const char* format, ... )
 		len = MAX_BUFF_LEN-1;
 	buff[len++] = '\n';
 
-	FILE* file = fopen( _filename, "aw+" );
+	FILE* file = fopen( _filename, "a+" );
 	if( !file )	
 		return;
 	fwrite( buff, len, sizeof(char), file );
@@ -579,7 +579,7 @@ void NLog::process_syslog_open( int year, int mon, int mday, int hour)
         log_[ LOG_TYPE_SYSLOG ] = open_log_file( "syslog_pipe" );
         return;
     }
-    log_[ LOG_TYPE_SYSLOG ] = fopen( syslog_name, "aw+" );
+    log_[ LOG_TYPE_SYSLOG ] = fopen( syslog_name, "a+" );
 }
 
 

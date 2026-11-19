@@ -125,11 +125,13 @@ bool GameLoginSvrModule::app_class_init()
     int32_t poll_wait_time = 100;
     int32_t proc_thread_num = 4;
     int32_t server_id = -1;
+    char ip[APP_CFG_NAME_MAX] = {0};
 
     APP_GET_STRING( "PlatformTag", g_game_login_svr->platform_tag_);
     APP_GET_STRING( "GameID", g_game_login_svr->game_id_);
 
     APP_GET_TABLE( "GameLoginSvr", 2 );
+    APP_GET_STRING( "IP", ip );
     APP_GET_NUMBER( "MaxCon", max_con );
     APP_GET_NUMBER( "Port", port );
     APP_GET_NUMBER( "Crypt", crypt );
@@ -146,7 +148,7 @@ bool GameLoginSvrModule::app_class_init()
         return false;
     }
 
-    if( g_game_login_svr->start_server( max_con, port, crypt, NULL, poll_wait_time, proc_thread_num ) < 0 )
+    if( g_game_login_svr->start_server( max_con, port, crypt, strlen(ip) > 0 ? ip : NULL, poll_wait_time, proc_thread_num ) < 0 )
     {
         ERR(2)( "[GameLoginSvrModule](app_class_init)start_server failed. port: %d, max_con: %d", port, max_con );
         return false;

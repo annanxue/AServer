@@ -122,6 +122,7 @@ void init_tick()
 
 int get_msec( unsigned long long tick )
 {
+    if( cpu_tick == 0 ) return 0;
     return tick * 1000 / cpu_tick;
 }
 
@@ -340,7 +341,7 @@ int get_mm()
 unsigned long long get_cpu_tick()
 {
 #ifndef ASERVER_POSIX
-    return 0;
+    return CPUMHz;
 #else
     char name[MAX_PATH] = {0,};
     snprintf( name, sizeof(name), "/proc/cpuinfo" );

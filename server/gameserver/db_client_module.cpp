@@ -17,6 +17,7 @@ Lunar<DBClient>::RegType DBClient::methods[] =
 };
 
 DBClient::DBClient()
+    : enabled_( true )
 {
     init_func_map();
 }
@@ -41,6 +42,7 @@ void DBClient::send_register_server_id()
 
 void DBClient::send_last_msg()
 {
+    if( !enabled_ ) return;
     BEFORESEND( ar, DB_TYPE_LAST_MSG );
     SEND( ar, g_dbclient, 0 );
 }
@@ -107,7 +109,7 @@ void DBClient::lua_msg_handle( lua_State* _L, const char* _msg, int _size, int _
 int32_t DBClient::c_is_connected( lua_State* _L )
 {
 	lcheck_argc( _L, 0 );
-	lua_pushboolean( _L, g_connect_thread->is_connected() );
+	lua_pushboolean( _L, enabled_ && g_connect_thread->is_connected() );
 	return 1;
 }
 
@@ -118,6 +120,8 @@ bool DBClientModule::app_class_init()
     int32_t crypt = 1;
     int32_t poll_wait_time = 100;
     int32_t sleep_time = 100;
+    int32_t smoke_mode = 0;
+    APP_GET_NUMBER( "SmokeMode", smoke_mode );
 
     APP_GET_TABLE( "DBClient", 2 );
     APP_GET_STRING( "IP", ip );
@@ -131,6 +135,13 @@ bool DBClientModule::app_class_init()
     {
         ERR(2)( "[DBClientModule](app_class_init)read cfg err!" );
         return false;
+    }
+
+    if( smoke_mode != 0 )
+    {
+        g_dbclient->set_enabled( false );
+        LOG(2)( "===========DBClient Module SmokeMode: external DB disabled===========" );
+        return true;
     }
 
     g_connect_thread->init( g_dbclient, ip, port, crypt, poll_wait_time, sleep_time );
